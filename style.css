@@ -132,7 +132,7 @@ section { padding: 88px 0; }
   content: "";
   position: absolute;
   inset: -10px;
-  background: url("../assets/hero-firefighters.jpg") center right / cover no-repeat;
+  background: url("hero-firefighters.jpg") center right / cover no-repeat;
   filter: saturate(1.05) brightness(0.92);
   z-index: 0;
 }
