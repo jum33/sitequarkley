@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Informations techniques / Quarkley SDIS</title>
+<meta name="description" content="Architecture, hébergement, sécurité et intégrations du portail Quarkley : le détail technique destiné aux DSI et RSSI de SDIS." />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" href="favicon-512.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-row">
+    <a href="index.html" class="brand">
+      <span class="mark"><img src="favicon-64.png" width="30" height="30" alt="" /></span>
+      Quarkley <span class="accent">SDIS</span>
+    </a>
+    <nav class="links">
+      <a href="index.html" class="">Accueil</a>
+      <a href="le-portail-ia.html" class="">Le portail IA</a>
+      <a href="cas-usage.html" class="">Cas d'usage</a>
+      <a href="souverainete.html" class="">Souveraineté</a>
+      <a href="alternatives.html" class="">Alternatives</a>
+      <a href="articles.html" class="">Articles</a>
+      <a href="sdis-00.html" class="">SDIS 00</a>
+      <a href="it.html" class="active">IT</a>
+      <a href="contact.html" class="">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn-feu">Réserver une démonstration</a>
+  </div>
+</header>
+
+<main>
+<section class="hero on-nuit" style="padding-bottom:56px;">
+  <div class="wrap" style="max-width:900px;">
+    <span class="eyebrow-pill">Pour votre DSI et votre RSSI</span>
+    <h1>Informations <span class="accent">techniques</span></h1>
+    <p class="lede" style="max-width:70ch;">Le reste de ce site présente le portail SDIS 00 à vos agents et à votre direction. Cette page réunit, à un seul endroit, tout ce que votre service informatique voudra vérifier avant un déploiement : architecture, hébergement, sécurité, intégrations et administration.</p>
+  </div>
+</section>
+
+<section class="on-white">
+  <div class="wrap">
+    <div class="section-head"><h2>Architecture &amp; modèles d'IA</h2></div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Plateforme multi-modèles</h3>
+        <p class="desc">Le portail donne accès à plus de 100 fournisseurs de modèles d'IA connectables (texte, image, transcription) depuis une seule interface — dont des modèles souverains français et des modèles open source. Le choix du modèle se fait par assistant ou par étape de workflow, sans migration ni changement d'outil.</p>
+      </div>
+      <div class="card">
+        <h3>Moteur de workflows (Automatisations)</h3>
+        <p class="desc">Constructeur visuel sans code : conditions, appels d'API, génération de texte ou d'image, transcription audio, interrogation de bases de connaissances, envoi d'e-mail. Chaque nœud choisit indépendamment le modèle d'IA le plus adapté à son étape.</p>
+      </div>
+      <div class="card">
+        <h3>Bases de connaissances (RAG)</h3>
+        <p class="desc">Vos documents (règlement opérationnel, GDO/GTO, notes de service, délibérations, clausiers) sont découpés et indexés automatiquement. Chaque réponse renvoie au document source précis, avec citation.</p>
+      </div>
+      <div class="card">
+        <h3>Personnalisation du domaine</h3>
+        <p class="desc">Portail servi sur votre propre domaine (schéma type <code>portail-ia.sdisXX.fr</code>), certificat géré automatiquement, écusson et couleurs de votre établissement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-brume">
+  <div class="wrap">
+    <div class="section-head"><h2>Sécurité, hébergement &amp; souveraineté</h2>
+    <p class="lede">Le détail technique des garanties présentées sur notre page <a href="souverainete.html" style="color:var(--feu); font-weight:700;">Souveraineté &amp; indépendance</a>.</p></div>
+    <div class="grid-3">
+      <div class="card-muted">
+        <h3>Routage intelligent des documents</h3>
+        <p class="desc">Vos documents ne sont jamais envoyés bruts aux serveurs des modèles d'IA. Une couche d'intelligence embarquée extrait l'information localement : règlement opérationnel, dossiers ERP, comptes-rendus restent dans le périmètre du SDIS. Seuls des extraits anonymisés transitent vers les modèles.</p>
+      </div>
+      <div class="card-muted">
+        <h3>Isolation des prompts</h3>
+        <p class="desc">Les questions des agents et les assistants configurés sont stockés exclusivement dans l'infrastructure souveraine du portail. Ils ne sont jamais utilisés par les fournisseurs de modèles pour entraîner leurs versions futures — garantie contractuelle.</p>
+      </div>
+      <div class="card-muted">
+        <h3>Audio traité localement</h3>
+        <p class="desc">Les enregistrements de séances (CASDIS, F3SCT, débriefings) sont transcrits par des modules locaux : les paroles ne transitent pas par un cloud tiers, ce qui reste indispensable quand les débats touchent des situations individuelles ou opérationnelles sensibles.</p>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:22px;">
+      <div class="card">
+        <h3>Hébergement</h3>
+        <p class="desc">Données hébergées en France, chez un hébergeur soumis au droit européen. Aucune donnée du SDIS n'est utilisée pour entraîner les modèles.</p>
+      </div>
+      <div class="card">
+        <h3>Mémoire &amp; données personnelles</h3>
+        <p class="desc">Mémoire utilisateur contrôlée, avec blocage des données personnelles configurable par l'administrateur. Journalisation complète des usages (qui, quoi, quand). Dossier de conformité fourni pour le registre des traitements et votre DPD.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-white">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Intégrations &amp; connecteurs</h2>
+      <p class="lede">Le portail vient s'insérer dans votre système d'information existant plutôt que de créer un outil de plus.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag-pill">Documents &amp; partage</span>
+        <h3 style="margin-top:14px;">SharePoint, Google Drive</h3>
+        <p class="desc">Les bases de connaissances du SDIS peuvent être alimentées directement depuis vos espaces documentaires existants, sans ressaisie ni double classement.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">Réunions &amp; instances</span>
+        <h3 style="margin-top:14px;">Google Meet, Microsoft Teams, Zoom</h3>
+        <p class="desc">Un bot de réunion rejoint les visioconférences pour transcrire et structurer CASDIS, F3SCT et réunions de service. Une connexion calendrier rattache chaque enregistrement à la réunion planifiée.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">Déclencheurs d'automatisation</span>
+        <h3 style="margin-top:14px;">E-mail, formulaire, planifié, webhook</h3>
+        <p class="desc">Chaque workflow métier peut démarrer depuis une boîte mail, un formulaire, un enregistrement audio, un événement planifié ou un appel externe signé (webhook) — sans interface supplémentaire.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">Outils internes</span>
+        <h3 style="margin-top:14px;">Serveurs MCP (Model Context Protocol)</h3>
+        <p class="desc">Catalogue de connecteurs prêts à activer (recherche documentaire, mémoire, productivité), en clé API ou en connexion OAuth, avec la possibilité de déclarer un serveur MCP propre au SDIS pour brancher un outil interne spécifique.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">Modèles d'IA</span>
+        <h3 style="margin-top:14px;">Plus de 100 fournisseurs connectés</h3>
+        <p class="desc">Modèles souverains et modèles de pointe accessibles depuis la même interface, choisis par assistant ou par étape de workflow.</p>
+      </div>
+      <div class="card">
+        <span class="tag-pill">Sur devis</span>
+        <h3 style="margin-top:14px;">Un connecteur métier manquant ?</h3>
+        <p class="desc">Un outil spécifique à votre SDIS n'est pas encore listé ici ? Chaque connexion supplémentaire est étudiée au cadrage, avant le déploiement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-brume">
+  <div class="wrap">
+    <div class="section-head"><h2>Gouvernance &amp; administration</h2></div>
+    <div class="card">
+      <ul class="bullets check">
+        <li>Droits d'accès par service et par rôle</li>
+        <li>Journalisation complète des usages</li>
+        <li>Budgets et suivi de consommation par direction, tableau de bord d'adoption</li>
+        <li>Rapport mensuel usages et coûts, exploitable en comité de direction</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="on-nuit cta-band">
+  <div class="wrap">
+    <h2>Une question technique précise ?</h2>
+    <p class="lede" style="max-width:56ch; margin-left:auto; margin-right:auto;">Nous la traitons directement avec votre DSI ou votre RSSI lors du cadrage, avant tout déploiement.</p>
+    <a href="contact.html" class="btn btn-feu">Réserver une démonstration</a>
+    <p class="fineprint">Sans engagement · 30 minutes</p>
+  </div>
+</section>
+
+</main>
+<footer class="photo-band">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand">Quarkley <span class="accent">SDIS</span></div>
+      <p>Le portail IA souverain, personnalisé pour chaque SDIS de France.</p>
+    </div>
+    <div>
+      <h4>Le site</h4>
+      <div class="footer-links">
+        <a href="le-portail-ia.html">Le portail IA</a>
+        <a href="cas-usage.html">Cas d'usage</a>
+        <a href="souverainete.html">Souveraineté &amp; indépendance</a>
+        <a href="alternatives.html">Face aux alternatives</a>
+        <a href="articles.html">Articles</a>
+        <a href="sdis-00.html">SDIS 00 : le démonstrateur</a>
+        <a href="it.html">IT</a>
+      </div>
+    </div>
+    <div>
+      <h4>Informations</h4>
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
+        <a href="#">Mentions légales</a>
+        <a href="https://www.linkedin.com/company/sdis-00/" target="_blank" rel="noopener">SDIS 00 sur LinkedIn ↗</a>
+      </div>
+      <p style="margin-top:14px; font-size:13px;">Données hébergées en France · Jamais utilisées pour entraîner les modèles</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Quarkley / Tous droits réservés</div>
+</footer>
+
+</body>
+</html>
