@@ -1,214 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SDIS 00 — le portail IA de votre SDIS, édité par Quarkley</title>
-<meta name="description" content="SDIS 00 est le portail IA souverain édité par Quarkley, personnalisé pour chaque SDIS de France. Cas d'usage opérationnels, prévention, RH et administratif." />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
-<link rel="apple-touch-icon" href="favicon-512.png" />
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarkley | L'IA au service des SDIS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; }
+        header { background: #fff; border-bottom: 3px solid #E60000; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 16px; font-weight: 700; color: #000; display: flex; align-items: center; gap: 10px; }
+        .logo-shield { width: 32px; height: 32px; background: #E60000; border-radius: 3px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 18px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text strong { font-size: 14px; }
+        .logo-text em { font-size: 10px; font-style: italic; color: #666; }
+        nav { display: flex; gap: 25px; list-style: none; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav a:hover { color: #E60000; }
+        .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
+        .cta-button:hover { background: #CC0000; }
+        .hero-page { background: linear-gradient(135deg, rgba(255, 60, 60, 0.8) 0%, rgba(230, 50, 50, 0.8) 100%); color: white; padding: 100px 20px; text-align: center; }
+        .hero-page h1 { font-size: 56px; margin-bottom: 15px; font-weight: 700; }
+        .hero-page p { font-size: 20px; opacity: 0.95; }
+        .section { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .constat { background: #FFF5F5; border-left: 5px solid #E60000; padding: 40px; border-radius: 6px; margin: 40px 0; }
+        .constat h2 { color: #E60000; margin-bottom: 20px; font-size: 28px; font-weight: 700; }
+        .constat p { font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
+        .case-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin: 50px 0; }
+        .case-card { background: white; border: 1px solid #e5e5e5; padding: 35px; border-radius: 6px; border-left: 4px solid #E60000; }
+        .case-card h3 { color: #E60000; font-size: 20px; margin-bottom: 15px; font-weight: 700; }
+        .case-card p { color: #666; line-height: 1.8; font-size: 15px; }
+        .case-card a { color: #E60000; text-decoration: none; font-weight: 600; margin-top: 20px; display: inline-block; font-size: 14px; }
+        .case-card a:hover { text-decoration: underline; }
+        .briques { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 50px 0; }
+        .brique { background: #f8f9fa; border: 1px solid #e5e5e5; padding: 25px; border-radius: 6px; text-align: center; border-top: 3px solid #E60000; }
+        .brique-icon { font-size: 36px; margin-bottom: 12px; }
+        .brique h4 { color: #E60000; font-size: 15px; margin-bottom: 10px; font-weight: 700; }
+        .brique p { font-size: 13px; color: #666; line-height: 1.6; }
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 50px 0; }
+        .metric { background: linear-gradient(135deg, #E60000 0%, #CC0000 100%); color: white; padding: 30px; border-radius: 6px; text-align: center; }
+        .metric-value { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+        .metric-label { font-size: 14px; opacity: 0.9; font-weight: 500; }
+        .btn-primary { background: #E60000; color: white; padding: 15px 40px; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; font-size: 16px; }
+        .btn-primary:hover { background: #CC0000; }
+        .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
+        .breadcrumb a { color: #E60000; text-decoration: none; }
+        footer { background: #1a1a1a; color: white; padding: 50px 20px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
+        .footer-section a:hover { color: white; }
+        .footer-section p { font-size: 12px; color: #999; }
+        .nav-links { display: flex; gap: 20px; margin-top: 50px; flex-wrap: wrap; }
+        .nav-links a { color: #E60000; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .cta-section { text-align: center; background: #FFF5F5; padding: 50px; border-radius: 6px; }
+        .cta-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 15px; }
+        .cta-section p { color: #666; font-size: 16px; margin-bottom: 30px; }
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero-page h1 { font-size: 32px; }
+        }
+    </style>
 </head>
 <body>
-<header class="site-nav">
-  <div class="nav-row">
-    <a href="index.html" class="brand">
-      <span class="mark"><img src="favicon-64.png" width="30" height="30" alt="" /></span>
-      Quarkley <span class="accent">SDIS</span>
-    </a>
-    <nav class="links">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="pourquoi.html" class="">Pourquoi</a>
-      <a href="comment.html" class="">Comment</a>
-      <a href="le-portail-ia.html" class="">Qu'est-ce qu'un portail</a>
-      <a href="cas-usage.html" class="">Cas d'usage</a>
-      <a href="articles.html" class="">Articles</a>
-      <a href="it.html" class="">IT</a>
-      <a href="contact.html" class="">Contact</a>
-    </nav>
-    <a href="contact.html" class="btn btn-feu">Réserver une démonstration</a>
-  </div>
-</header>
-
-<main>
-<section class="hero on-nuit photo-band">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow-pill">SDIS 00 · le portail IA édité par Quarkley</span>
-      <h1>Le portail IA <span class="accent">de votre<br />SDIS</span></h1>
-      <p class="lede">Un portail IA souverain, aux couleurs de votre établissement, branché sur votre doctrine et vos documents. Pour tous vos agents (SPP, SPV, PATS), dans un cadre maîtrisé par la direction.</p>
-      <p style="margin-top:14px; color:var(--text-onnuit-muted); font-size:14.5px;">Les exemples de ce site sont ceux de <strong style="color:#fff;">SDIS 00</strong>, notre établissement de démonstration — <a href="#sdis-00" style="color:#fff; text-decoration:underline;">le découvrir ci-dessous ↓</a>. Quarkley conçoit, déploie et accompagne ce portail pour votre propre SDIS.</p>
-      <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-feu">Réserver une démonstration</a>
-        <a href="le-portail-ia.html" class="btn btn-outline-onnuit">Découvrir le portail</a>
-      </div>
-    </div>
-    <div class="browser-card">
-      <div class="chrome">
-        <span class="dot r"></span><span class="dot g"></span>
-        <span class="url">portail-ia.sdis00.fr</span>
-      </div>
-      <div class="body-pad">
-        <div class="chat-q">Quel est le départ type pour un feu de VL en parking souterrain ?</div>
-        <div class="chat-a">
-          D'après votre règlement opérationnel (art. 4.2.3) : engagement d'un groupe incendie, binômes sous ARI, moyens de ventilation…
-          <div class="source">Source : Règlement opérationnel SDIS, édition 2025</div>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-shield">🛡</div>
+                <div class="logo-text">
+                    <strong>Quarkley</strong>
+                    <em>L'IA au service des SDIS</em>
+                </div>
+            </div>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/operationnel">Opérationnel</a>
+                <a href="/prevention">Prévention</a>
+                <a href="/rh-admin">RH & Admin</a>
+                <a href="/deployer">Déploiement</a>
+                <a href="/conformite">Conformité</a>
+                <a href="/contact" class="cta-button">Réserver</a>
+            </nav>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section class="on-white" id="sdis-00">
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow-pill">Pourquoi un établissement fictif</span>
-      <h2>SDIS 00, <span class="accent">notre établissement de démonstration</span></h2>
-      <p style="margin-top:16px; color:var(--text-muted);">Difficile de juger un portail IA sur une présentation abstraite. Tous les exemples de ce site — les questions posées aux assistants, les cas d'usage, les captures de portail — sont ceux de « SDIS 00 » : un établissement de démonstration, pas un SDIS réel, qui nous permet de vous montrer le portail configuré comme il le serait pour le vôtre.</p>
-      <p style="margin-top:14px; color:var(--text-muted);">Quarkley conçoit, édite et fait évoluer ce portail. SDIS 00 en est la vitrine ; votre SDIS peut en être le prochain déploiement, avec sa propre doctrine et son propre écusson.</p>
+    <div class="breadcrumb">
+        <strong>Accueil</strong>
     </div>
-    <div class="card-muted">
-      <h3>Ce que SDIS 00 illustre</h3>
-      <ul class="bullets check">
-        <li>Un portail à l'écusson et au domaine d'un établissement (<code>portail-ia.sdis00.fr</code>)</li>
-        <li>Des assistants par pôle : @doctrine, @prevention, @rh, @marches</li>
-        <li>14 cas d'usage prêts à déployer, de l'opérationnel à l'administratif</li>
-        <li>Un déploiement technique en 48h, puis une formation des agents</li>
-      </ul>
-      <p style="margin-top:18px;"><a href="le-portail-ia.html" style="color:var(--feu); font-weight:700;">Voir le portail de SDIS 00 →</a></p>
-    </div>
-  </div>
-</section>
 
-<section class="on-brume">
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow-pill">Le constat</span>
-      <h2>L'IA est déjà dans vos centres de secours, <span class="accent">sans contrôle</span></h2>
-      <p style="margin-top:16px; color:var(--text-muted);">Vos agents utilisent déjà ChatGPT : comptes personnels, serveurs hors d'Europe, aucune traçabilité. Et acheter des licences LLM ne règle rien : sans gouvernance, personne ne sait où part l'information, ni ce que l'IA répond à vos agents.</p>
-      <ul class="bullets">
-        <li>Des données du service envoyées vers des serveurs que personne ne maîtrise.</li>
-        <li>Des licences ajoutées sans règles d'usage, sans droits par service, sans journal des échanges.</li>
-        <li>Des réponses génériques, déconnectées de votre doctrine, parfois dangereuses.</li>
-      </ul>
-      <p style="margin-top:18px; font-weight:700;">La vraie question n'est pas « faut-il autoriser l'IA ? » mais « comment en profiter tout en la contrôlant ? »</p>
-      <p style="margin-top:14px; font-size:14px;"><a href="pourquoi.html" style="color:var(--text-muted); text-decoration:underline;">Pourquoi un portail IA plutôt qu'un outil grand public →</a></p>
-    </div>
-    <div class="quote-card">
-      <div class="mark">&laquo;</div>
-      <p class="text">J'ai appris que, lors d'une intervention, un pompier avait demandé à ChatGPT le dosage d'une injection. Il nous fallait un outil avec l'aisance de ChatGPT, et le contrôle inhérent à un service public comme le SDIS.</p>
-      <div class="attrib">Un officier de SDIS</div>
-      <hr />
-      <p class="followup">C'est exactement ce que fait le portail : la même aisance pour les agents, dans le cadre du SDIS : réponses sourcées sur votre doctrine, données dans votre périmètre, usages journalisés.</p>
-    </div>
-  </div>
-</section>
+    <section class="hero-page">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h1>Quarkley</h1>
+            <p>L'IA au service des SDIS • Souverain • Conformé • Français</p>
+        </div>
+    </section>
 
-<section class="on-white" style="padding: 64px 0;">
-  <div class="wrap stats-row">
-    <div class="stat"><div class="num">100 %</div><div class="label">hébergé en France</div></div>
-    <div class="stat"><div class="num">48h</div><div class="label">déploiement technique</div></div>
-    <div class="stat"><div class="num">14</div><div class="label">cas d'usage prêts à déployer, par pôle</div></div>
-  </div>
-</section>
+    <section class="section">
+        <div class="constat">
+            <h2>Le constat</h2>
+            <p><strong>L'IA est déjà utilisée dans vos centres de secours.</strong> Par vos officiers, vos préventionnistes, vos gestionnaires. Mais sans contrôle, sans conformité RGPD, et souvent avec des données qui quittent la France.</p>
+            <p><strong>Quarkley change ça.</strong> Un portail IA 100% souverain (France), RGPD compliant, avec trace totale. Vos données restent chez vous. Vos décisions restent vôtres.</p>
+        </div>
 
-<section class="on-brume">
-  <div class="wrap">
-    <div class="section-head center">
-      <h2>Ce que le portail fait déjà pour un SDIS</h2>
-      <p class="lede">Trois exemples parmi les cas d'usage que nous déployons, de l'opérationnel à l'administratif.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card">
-        <span class="tag-pill">Opérationnel</span>
-        <h3 style="margin-top:14px;">Assistant doctrine opérationnelle</h3>
-        <p class="desc">Une base de connaissances dédiée regroupe l'ensemble de la doctrine du SDIS. Chaque agent interroge en langage naturel : « quel est le départ type pour un feu de VL en tunnel ? » et obtient la réponse sourcée, avec renvoi au document d'origine.</p>
-        <p class="outcome">La bonne référence doctrinale en quelques secondes, réponse toujours sourcée.</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill">Prévention &amp; Prévision</span>
-        <h3 style="margin-top:14px;">Aide à l'instruction des dossiers ERP</h3>
-        <p class="desc">Le portail analyse la notice de sécurité déposée, la confronte aux articles applicables selon le type et la catégorie de l'établissement, et produit une grille d'analyse : points conformes, points à vérifier, non-conformités probables.</p>
-        <p class="outcome">Un pré-examen du dossier en minutes ; le préventionniste concentre son expertise sur les points sensibles.</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill">Administratif &amp; Finances</span>
-        <h3 style="margin-top:14px;">Comptes-rendus d'instances</h3>
-        <p class="desc">L'enregistrement de séance est transcrit puis structuré en projet de procès-verbal : ordre du jour, débats résumés, délibérations et votes. Le secrétariat relit et fait valider.</p>
-        <p class="outcome">Un projet de PV le lendemain de la séance, au lieu de deux semaines.</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a href="cas-usage.html" style="color:var(--feu); font-weight:700; text-decoration:underline;">Voir les 14 cas d'usage par pôle →</a>
-    </div>
-  </div>
-</section>
+        <h2 style="font-size: 36px; margin: 60px 0 40px 0; font-weight: 700;">3 cas clés</h2>
+        <div class="case-cards">
+            <div class="case-card">
+                <h3>Opérationnel</h3>
+                <p>@doctrine répond en 10 secondes aux questions de doctrine. Contre 20 minutes de recherche manuelle. ROI: 2h gagnées par semaine par officier.</p>
+                <a href="/operationnel">Explorer →</a>
+            </div>
+            <div class="case-card">
+                <h3>Prévention</h3>
+                <p>@prevention analyse une notice ERP en 45 minutes. Contre 3h30 de lecture manuelle. ROI: 56 heures par an par préventionniste.</p>
+                <a href="/prevention">Explorer →</a>
+            </div>
+            <div class="case-card">
+                <h3>RH & Admin</h3>
+                <p>PV CASDIS en 24h. Paies automatisées (-50%). Marchés publics évalués 75% plus vite. ROI mesurable immédiat.</p>
+                <a href="/rh-admin">Explorer →</a>
+            </div>
+        </div>
 
-<section class="on-white">
-  <div class="wrap two-col">
-    <div>
-      <h2>Une architecture souveraine, <span class="accent">pensée pour la sécurité civile</span></h2>
-      <p style="margin-top:16px; color:var(--text-muted);">Le portail Quarkley repose sur une plateforme IA d'entreprise éprouvée, que nous configurons pour la sécurité civile : assistants métier, doctrine indexée, accompagnement des agents.</p>
-      <ul class="bullets">
-        <li>Une plateforme robuste et maintenue, déjà déployée en entreprise et en collectivité.</li>
-        <li>Des assistants et bases de connaissances construits pour les métiers du SDIS.</li>
-        <li>Un interlocuteur unique pour le déploiement, la formation et le suivi d'adoption.</li>
-      </ul>
-      <p style="margin-top:14px; font-size:14px;"><a href="it.html" style="color:var(--text-muted); text-decoration:underline;">Détail technique de la plateforme (page IT) →</a></p>
-    </div>
-    <div class="card-muted">
-      <h3>Souveraineté par construction</h3>
-      <ul class="bullets check">
-        <li>Hébergement en France, droit européen</li>
-        <li>Données jamais utilisées pour entraîner les modèles</li>
-        <li>Droits d'accès par service, journalisation complète</li>
-        <li>Suivi des coûts par direction, budgets plafonnés</li>
-        <li>Dossier de conformité remis à votre DPD</li>
-      </ul>
-      <p style="margin-top:18px;"><a href="pourquoi.html" style="color:var(--feu); font-weight:700;">Souveraineté &amp; indépendance en détail →</a></p>
-    </div>
-  </div>
-</section>
+        <h2 style="font-size: 36px; margin: 60px 0 40px 0; font-weight: 700;">8 briques du portail</h2>
+        <div class="briques">
+            <div class="brique">
+                <div class="brique-icon">🤖</div>
+                <h4>Assistants IA spécialisés</h4>
+                <p>@doctrine, @prevention, @rh, @marches</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">📚</div>
+                <h4>Bases de connaissances</h4>
+                <p>RO, ERP, CCTP, marchés indexés</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">📝</div>
+                <h4>Comptes-rendus automatisés</h4>
+                <p>PV, rapports, synthèses en 24h</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">⚙️</div>
+                <h4>Workflows métier</h4>
+                <p>Automatisation tâches répétitives</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">🔄</div>
+                <h4>Multi-IA, zéro dépendance</h4>
+                <p>Claude, Mistral, ChatGPT – changez en 1 clic</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">💰</div>
+                <h4>Gouvernance des coûts</h4>
+                <p>Budgets plafonnés, rapports mensuels</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">🎨</div>
+                <h4>Aux couleurs du SDIS</h4>
+                <p>Interface personnalisée 100%</p>
+            </div>
+            <div class="brique">
+                <div class="brique-icon">🛡️</div>
+                <h4>Hébergement souverain</h4>
+                <p>France, RGPD, audit trail complet</p>
+            </div>
+        </div>
 
-<section class="on-nuit cta-band">
-  <div class="wrap">
-    <h2>Voyez le portail en action</h2>
-    <p class="lede" style="max-width:56ch; margin-left:auto; margin-right:auto;">30 minutes en visioconférence : nous vous montrons le portail configuré pour un SDIS, avec vos cas d'usage prioritaires.</p>
-    <a href="contact.html" class="btn btn-feu">Réserver une démonstration</a>
-    <p class="fineprint">Sans engagement · 30 minutes</p>
-  </div>
-</section>
+        <h2 style="font-size: 36px; margin: 60px 0 40px 0; font-weight: 700;">Résultats mesurables</h2>
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Données France</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">48h</div>
+                <div class="metric-label">Déploiement</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">14</div>
+                <div class="metric-label">Cas d'usage métiers</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Dépendance fournisseur</div>
+            </div>
+        </div>
+    </section>
 
-</main>
-<footer class="photo-band">
-  <div class="wrap footer-grid">
-    <div>
-      <div class="brand">Quarkley <span class="accent">SDIS</span></div>
-      <p>Le portail IA souverain, personnalisé pour chaque SDIS de France.</p>
-    </div>
-    <div>
-      <h4>Le site</h4>
-      <div class="footer-links">
-        <a href="pourquoi.html">Pourquoi un portail IA</a>
-        <a href="comment.html">Comment se déroule un déploiement</a>
-        <a href="le-portail-ia.html">Qu'est-ce qu'un portail</a>
-        <a href="cas-usage.html">Cas d'usage</a>
-        <a href="articles.html">Articles</a>
-        <a href="it.html">IT</a>
-      </div>
-    </div>
-    <div>
-      <h4>Informations</h4>
-      <div class="footer-links">
-        <a href="contact.html">Contact</a>
-        <a href="#">Mentions légales</a>
-        <a href="https://www.linkedin.com/company/sdis-00/" target="_blank" rel="noopener">SDIS 00 sur LinkedIn ↗</a>
-      </div>
-      <p style="margin-top:14px; font-size:13px;">Données hébergées en France · Jamais utilisées pour entraîner les modèles</p>
-    </div>
-  </div>
-  <div class="footer-bottom">© 2026 Quarkley / Tous droits réservés</div>
-</footer>
+    <section class="section">
+        <div class="cta-section">
+            <h2>Démarrer maintenant</h2>
+            <p>Démonstration gratuite · Sans engagement · Conformité garantie</p>
+            <button class="btn-primary" onclick="document.location='/contact'">Réserver une démo</button>
+        </div>
+    </section>
 
+    <section class="section">
+        <div class="nav-links">
+            <a href="/operationnel">Opérationnel →</a>
+            <a href="/prevention">Prévention →</a>
+            <a href="/rh-admin">RH & Admin →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Le portail</h4>
+                <ul>
+                    <li><a href="/operationnel">Opérationnel</a></li>
+                    <li><a href="/prevention">Prévention</a></li>
+                    <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/deployer">Déploiement</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Conformité</h4>
+                <ul>
+                    <li><a href="/conformite">Checklist légale</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quarkley</h4>
+                <p>L'IA souveraine au service des SDIS de France.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

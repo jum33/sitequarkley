@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conformité | Quarkley</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; }
+        header { background: #fff; border-bottom: 3px solid #E60000; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 16px; font-weight: 700; color: #000; display: flex; align-items: center; gap: 10px; }
+        .logo-shield { width: 32px; height: 32px; background: #E60000; border-radius: 3px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 18px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text strong { font-size: 14px; }
+        .logo-text em { font-size: 10px; font-style: italic; color: #666; }
+        nav { display: flex; gap: 25px; list-style: none; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav a:hover { color: #E60000; }
+        .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
+        .cta-button:hover { background: #CC0000; }
+        .hero-page { background: linear-gradient(135deg, rgba(255, 60, 60, 0.8) 0%, rgba(230, 50, 50, 0.8) 100%); color: white; padding: 80px 20px; }
+        .hero-page h1 { font-size: 44px; margin-bottom: 15px; font-weight: 700; }
+        .hero-page p { font-size: 18px; opacity: 0.95; }
+        .section { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .checklist { background: #f8f9fa; padding: 30px; border-radius: 6px; margin: 30px 0; border-top: 4px solid #E60000; }
+        .checklist-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid #e5e5e5; }
+        .checklist-item:last-child { border-bottom: none; }
+        .checklist-check { color: #E60000; font-weight: 700; font-size: 18px; min-width: 20px; }
+        .checklist-text { flex: 1; }
+        .section-box { background: white; border-left: 4px solid #E60000; padding: 30px; border-radius: 6px; margin: 30px 0; }
+        .section-box h3 { font-size: 20px; margin-bottom: 15px; color: #E60000; font-weight: 700; }
+        .section-box ul { list-style-position: inside; color: #666; font-size: 14px; }
+        .section-box li { margin-bottom: 10px; }
+        .faq { margin: 30px 0; }
+        .faq-item { background: white; border: 1px solid #e5e5e5; border-radius: 6px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #E60000; }
+        .faq-q { font-weight: 600; color: #E60000; margin-bottom: 10px; font-size: 16px; }
+        .faq-a { color: #666; font-size: 14px; }
+        .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
+        .breadcrumb a { color: #E60000; text-decoration: none; }
+        footer { background: #1a1a1a; color: white; padding: 50px 20px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
+        .footer-section a:hover { color: white; }
+        .btn-primary { background: #E60000; color: white; padding: 15px 40px; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; }
+        .btn-primary:hover { background: #CC0000; }
+        .nav-links { display: flex; gap: 20px; margin-top: 50px; flex-wrap: wrap; }
+        .nav-links a { color: #E60000; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .cta-section { text-align: center; background: #FFF5F5; padding: 40px; border-radius: 6px; margin: 40px 0; }
+        .cta-section h2 { color: #1a1a1a; font-size: 28px; margin-bottom: 15px; }
+        .cta-section p { color: #666; margin-bottom: 20px; }
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero-page h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-shield">🛡</div>
+                <div class="logo-text">
+                    <strong>Quarkley</strong>
+                    <em>L'IA au service des SDIS</em>
+                </div>
+            </div>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/operationnel">Opérationnel</a>
+                <a href="/prevention">Prévention</a>
+                <a href="/rh-admin">RH & Admin</a>
+                <a href="/deployer">Déploiement</a>
+                <a href="/conformite">Conformité</a>
+                <a href="/contact" class="cta-button">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Accueil</a> / <strong>Conformité</strong>
+    </div>
+
+    <section class="hero-page">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1>Conformité & Souveraineté SDIS</h1>
+            <p>Tout ce qu'il faut savoir sur la sécurité, l'hébergement et la conformité légale</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 style="font-size: 32px; margin-bottom: 30px;">Checklist légale (9 points)</h2>
+
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Hébergement en France</strong> - Droit européen garanti</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Données jamais utilisées pour entraîner les modèles</strong> - Engagement contractuel</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>RGPD compliant</strong> - Conformité garantie</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Dossier conformité pour DPD</strong> - Registre des traitements pré-rempli</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Droits d'accès par service</strong> - Configurables selon votre structure</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Journalisation complète</strong> - Qui, Quoi, Quand - 100% traçabilité</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Budgets plafonnés par direction</strong> - Maîtrise des coûts garantie</div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-check">✅</div>
+                <div class="checklist-text"><strong>Rapport mensuel usages + coûts</strong> - Pour votre comité de direction</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-box" id="architecture">
+            <h3>📊 Architecture: La passerelle étanche</h3>
+            <p style="margin-bottom: 20px;">Vos données restent chez vous. Nous isolons les données sensibles des modèles IA.</p>
+            <ul>
+                <li><strong>Hébergement:</strong> Opérateur France (HDS certified, ISO27001, RGPD certifié)</li>
+                <li><strong>Intégrations:</strong> GED, Mail, SSO, API REST</li>
+                <li><strong>Modèles IA:</strong> Claude (défaut), Mistral, ChatGPT, Open source</li>
+                <li><strong>Traçabilité:</strong> Journalisation complète de tous les usages</li>
+            </ul>
+        </div>
+
+        <div class="section-box">
+            <h3>🔗 Intégrations disponibles</h3>
+            <ul>
+                <li><strong>GED:</strong> SharePoint, NextCloud</li>
+                <li><strong>Mail:</strong> Outlook, Zimbra</li>
+                <li><strong>Visioconférence:</strong> Teams, Zoom</li>
+                <li><strong>SSO:</strong> Active Directory (AD)</li>
+                <li><strong>API:</strong> REST pour webhooks custom</li>
+            </ul>
+        </div>
+
+        <div class="section-box">
+            <h3>🤖 Modèles IA disponibles</h3>
+            <ul>
+                <li><strong>Claude (Anthropic):</strong> Par défaut pour analyses texte</li>
+                <li><strong>Mistral (souverain EU):</strong> Alternative European</li>
+                <li><strong>ChatGPT (OpenAI):</strong> Pour tâches complexes</li>
+                <li><strong>Open source (Llama):</strong> Coûts minimaux</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 style="font-size: 28px; margin-bottom: 30px;">Questions fréquentes</h2>
+        <div class="faq" id="faq">
+            <div class="faq-item">
+                <div class="faq-q">❓ Pourquoi hébergement en France?</div>
+                <div class="faq-a">Un SDIS ne peut pas faire transiter ses données par des services non contractualisés hors Europe. L'hébergement France garantit le droit européen et la conformité légale. Vous maîtrisez complètement où vos données résident.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ Vérification CNIL possible?</div>
+                <div class="faq-a">Oui. Nous fournissons un dossier complet pour votre DPD (Délégué à la Protection des Données). Votre registre des traitements peut être audité à tout moment. Nous facilitons même les audits externes si besoin.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ Comment garantir que mes données ne servent pas à entraîner les modèles?</div>
+                <div class="faq-a">Engagement contractuel explicite. Zéro donnée SDIS n'est utilisée pour entraîner ou affiner les modèles IA. Ceci est écrit dans le contrat et contrôlable techniquement par isolement des données.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ Puis-je changer de modèle IA si Anthropic change ses tarifs?</div>
+                <div class="faq-a">Oui, c'est l'avantage du portail. Vous pouvez basculer d'un modèle IA à un autre en un clic. Vos assistants, vos documents, votre historique restent en place. Aucune dépendance fournisseur.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ Que se passe-t-il si je quitte Quarkley?</div>
+                <div class="faq-a">Vos données, vos assistants configurés, vos bases de connaissances indexées - tout vous appartient. Réversibilité garantie. Vous ne perdez rien en quittant.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="cta-section">
+            <h2>Questions de conformité?</h2>
+            <p>Réservez une démo avec notre équipe conformité<br>Nous répondons à vos questions, DPD bienvenu</p>
+            <button class="btn-primary" onclick="document.location='/contact'">Réserver une démo</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="nav-links">
+            <a href="/deployer">← Déploiement</a>
+            <a href="/contact">Contact →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Le portail</h4>
+                <ul>
+                    <li><a href="/operationnel">Opérationnel</a></li>
+                    <li><a href="/prevention">Prévention</a></li>
+                    <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/deployer">Déploiement</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Conformité</h4>
+                <ul>
+                    <li><a href="/conformite">Checklist légale</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quarkley</h4>
+                <p style="font-size: 12px;">L'IA souveraine au service des SDIS.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
