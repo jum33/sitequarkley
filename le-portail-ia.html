@@ -20,7 +20,9 @@
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
-        .hero-page { background: url('bandeaucetquoileportail.jpeg') center 22%/cover no-repeat; width: 100%; height: clamp(220px, 34vw, 460px); padding: 0; }
+        .hero-page { position: relative; overflow: hidden; background: #0f1e3a; padding: 0; height: min(56vw, 480px); }
+        .hero-page::before { content: ""; position: absolute; inset: -40px; background: url('bandeaucetquoileportail.jpeg') center/cover no-repeat; filter: blur(28px) brightness(0.55); }
+        .hero-page img { position: relative; display: block; height: 100%; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
         .hero-page h1 { font-size: 44px; margin-bottom: 15px; font-weight: 700; }
         .hero-page p { font-size: 18px; opacity: 0.95; max-width: 70ch; }
         .section { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
@@ -89,7 +91,9 @@
         <a href="/">Accueil</a> / <strong>C'est quoi un portail ?</strong>
     </div>
 
-    <section class="hero-page" role="img" aria-label="C'est quoi, un portail IA ? Salle de travail d'un SDIS avec le portail IA sécurisé affiché sur grand écran."></section>
+    <section class="hero-page">
+        <img src="bandeaucetquoileportail.jpeg" alt="C'est quoi, un portail IA ? Salle de travail d'un SDIS avec le portail IA sécurisé affiché sur grand écran." width="1920" height="1072">
+    </section>
 
     <section class="section">
         <div class="en-clair">
