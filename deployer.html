@@ -14,8 +14,8 @@
         .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
         .logo-text strong { font-size: 14px; }
         .logo-text em { font-size: 10px; font-style: italic; color: #666; }
-        nav { display: flex; gap: 25px; list-style: none; }
-        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav { display: flex; gap: 18px; list-style: none; align-items: center; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
@@ -36,7 +36,7 @@
         .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
         .breadcrumb a { color: #E60000; text-decoration: none; }
         footer { background: #1a1a1a; color: white; padding: 50px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
         .footer-section ul { list-style: none; }
         .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
@@ -48,7 +48,7 @@
         .cta-section { text-align: center; background: #FFF5F5; padding: 40px; border-radius: 6px; margin: 40px 0; }
         .cta-section h2 { color: #1a1a1a; font-size: 28px; margin-bottom: 15px; }
         .cta-section p { color: #666; margin-bottom: 20px; }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav { display: none; }
             .hero-page h1 { font-size: 28px; }
             .phase-content { grid-template-columns: 1fr; }
@@ -71,8 +71,9 @@
                 <a href="/operationnel">Opérationnel</a>
                 <a href="/prevention">Prévention</a>
                 <a href="/rh-admin">RH & Admin</a>
+                <a href="/terrain">Sur le terrain</a>
+                <a href="/formulaires">Formulaires</a>
                 <a href="/deployer">Déploiement</a>
-                <a href="/conformite">Conformité</a>
                 <a href="/contact" class="cta-button">Réserver</a>
             </nav>
         </div>
@@ -97,9 +98,11 @@
                     <h3>✓ Quoi?</h3>
                     <ul>
                         <li>Audit documents existants (RO, GTO, notes, délibérations)</li>
+                        <li>Chargement du vocabulaire du SDIS (sigles, règlement intérieur, modèles de courriers, ton des notes)</li>
                         <li>Configuration assistants (@doctrine, @prevention, @rh, @marches)</li>
-                        <li>Matrice droits d'accès (qui accède à quoi?)</li>
-                        <li>Plan intégrations (GED, Mail, SSO)</li>
+                        <li>Matrice droits d'accès (qui voit quoi ?), vérifiée avec le simulateur d'accès</li>
+                        <li>Choix des premiers formulaires (attestation, QCM FMPA, courrier usager…)</li>
+                        <li>Plan de raccordement (GED, messagerie, comptes existants)</li>
                     </ul>
                 </div>
                 <div class="phase-item">
@@ -119,19 +122,20 @@
                 <div class="phase-item">
                     <h3>✓ Quoi?</h3>
                     <ul>
-                        <li>Hébergement instance (France)</li>
-                        <li>Intégrations branchées (GED, Mail, SSO, API)</li>
-                        <li>Tests sécurité</li>
-                        <li>Go-live production</li>
+                        <li>Hébergement du portail (France)</li>
+                        <li>Raccordement à vos outils : Microsoft 365 (SharePoint, Teams) ou Google Workspace, messagerie</li>
+                        <li>Connexion avec vos comptes existants (Microsoft ou Google) ou par code e-mail — aucun mot de passe supplémentaire</li>
+                        <li>Aucune installation sur les postes : une adresse web, l'application téléphone en option</li>
+                        <li>Tests de sécurité, mise en production</li>
                     </ul>
                 </div>
                 <div class="phase-item">
                     <h3>✓ Livrables</h3>
                     <ul>
-                        <li>URL active: portail-ia.sdisXX.fr</li>
-                        <li>SSO fonctionnel (Active Directory)</li>
-                        <li>Documents indexés</li>
-                        <li>Dossier DPD complet</li>
+                        <li>Adresse active : portail-ia.sdisXX.fr, aux couleurs du SDIS</li>
+                        <li>Connexion avec les comptes du SDIS opérationnelle</li>
+                        <li>Documents indexés, vocabulaire chargé</li>
+                        <li>Dossier complet pour le DPD (traitements, sous-traitants, engagements, procédure d'export)</li>
                     </ul>
                 </div>
             </div>
@@ -143,18 +147,20 @@
                 <div class="phase-item">
                     <h3>4 ateliers (2h chacun)</h3>
                     <ul>
-                        <li><strong>Opérationnel:</strong> @doctrine, RTC, cas pratiques</li>
-                        <li><strong>Prévention:</strong> @prevention, upload notice ERP</li>
-                        <li><strong>RH & Admin:</strong> PV CASDIS, paies, marchés</li>
-                        <li><strong>Direction/DSI:</strong> Admin, coûts, conformité</li>
+                        <li><strong>Opérationnel:</strong> @doctrine, RETEX dicté sur téléphone, cas pratiques</li>
+                        <li><strong>Prévention:</strong> @prevention, dépôt d'une notice ERP, projet par établissement</li>
+                        <li><strong>RH & Admin:</strong> PV CASDIS enregistré, formulaires attestation et courrier, marchés</li>
+                        <li><strong>Direction/référent:</strong> droits d'accès, budgets, tableau de bord, journal d'activité</li>
+                        <li>Chaque assistant passe un jeu de questions-tests avant d'être ouvert aux agents</li>
                     </ul>
                 </div>
                 <div class="phase-item">
                     <h3>✓ Livrables</h3>
                     <ul>
-                        <li>Équipes formées</li>
-                        <li>Super-users identifiés</li>
-                        <li>FAQ document</li>
+                        <li>Équipes formées (30 minutes suffisent pour un utilisateur)</li>
+                        <li>Référents identifiés dans chaque service</li>
+                        <li>FAQ propre au SDIS, rédigée pendant les ateliers</li>
+                        <li><a href="/se-former" style="color:#E60000; font-weight:600; text-decoration:none;">Voir le détail de la formation →</a></li>
                     </ul>
                 </div>
             </div>
@@ -166,10 +172,10 @@
                 <div class="phase-item">
                     <h3>✓ Étapes</h3>
                     <ul>
-                        <li>Sem 1-2: Analytics usage (qui utilise quoi?)</li>
-                        <li>Sem 2: Ajustements minor (perfs, workflows)</li>
-                        <li>Sem 3: Rollout autres services</li>
-                        <li>Sem 4-8: Nouveaux workflows, optimisations</li>
+                        <li>Sem 1-2: Tableau de bord des usages (qui utilise quoi ?), lecture hebdomadaire des pouces haut / pouces bas</li>
+                        <li>Sem 2: Ajustements des assistants à partir des retours</li>
+                        <li>Sem 3: Ouverture aux autres services et aux centres</li>
+                        <li>Sem 4-8: Nouveaux formulaires à la demande des services, première micro-formation mensuelle de 15 min</li>
                     </ul>
                 </div>
                 <div class="phase-item">
@@ -225,8 +231,8 @@
 
     <section class="section">
         <div class="nav-links">
-            <a href="/rh-admin">← RH & Admin</a>
-            <a href="/conformite">Conformité →</a>
+            <a href="/formulaires">← Un formulaire, un résultat</a>
+            <a href="/se-former">Se former →</a>
         </div>
     </section>
 
@@ -239,13 +245,17 @@
                     <li><a href="/operationnel">Opérationnel</a></li>
                     <li><a href="/prevention">Prévention</a></li>
                     <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/terrain">Sur le terrain</a></li>
+                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
                     <li><a href="/deployer">Déploiement</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Conformité</h4>
+                <h4>Pour aller plus loin</h4>
                 <ul>
-                    <li><a href="/conformite">Checklist légale</a></li>
+                    <li><a href="/se-former">Se former sans être informaticien</a></li>
+                    <li><a href="/faq">Questions fréquentes</a></li>
+                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
                 </ul>
             </div>
             <div class="footer-section">

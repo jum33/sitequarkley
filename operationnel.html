@@ -14,8 +14,8 @@
         .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
         .logo-text strong { font-size: 14px; }
         .logo-text em { font-size: 10px; font-style: italic; color: #666; }
-        nav { display: flex; gap: 25px; list-style: none; }
-        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav { display: flex; gap: 18px; list-style: none; align-items: center; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
@@ -34,7 +34,7 @@
         .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
         .breadcrumb a { color: #E60000; text-decoration: none; }
         footer { background: #1a1a1a; color: white; padding: 50px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
         .footer-section ul { list-style: none; }
         .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
@@ -46,7 +46,7 @@
         .cta-section { text-align: center; background: #FFF5F5; padding: 40px; border-radius: 6px; margin: 40px 0; }
         .cta-section h2 { color: #1a1a1a; font-size: 28px; margin-bottom: 15px; }
         .cta-section p { color: #666; margin-bottom: 20px; }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav { display: none; }
             .hero-page h1 { font-size: 28px; }
         }
@@ -68,8 +68,9 @@
                 <a href="/operationnel">Opérationnel</a>
                 <a href="/prevention">Prévention</a>
                 <a href="/rh-admin">RH & Admin</a>
+                <a href="/terrain">Sur le terrain</a>
+                <a href="/formulaires">Formulaires</a>
                 <a href="/deployer">Déploiement</a>
-                <a href="/conformite">Conformité</a>
                 <a href="/contact" class="cta-button">Réserver</a>
             </nav>
         </div>
@@ -82,7 +83,7 @@
     <section class="hero-page">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <h1>Opérationnel</h1>
-            <p>@doctrine, interventions, RTC – Comment Quarkley accélère les décisions opérationnelles</p>
+            <p>@doctrine, veille réglementaire, RETEX dicté depuis le terrain, QCM de FMPA – Comment le portail fait gagner du temps aux officiers et aux formateurs</p>
         </div>
     </section>
 
@@ -139,7 +140,8 @@
 
             <h3>La solution</h3>
             <div class="solution">
-                Workflow automatisé: Chaque lundi matin, synthèse changements réglementaires
+                <strong>✓ Une automatisation qui tourne toute seule, chaque lundi à 7 h</strong><br>
+                Le portail lit les textes parus dans la semaine (recherche web avec sources), les croise avec vos documents (RO, notes, GDO), garde ce qui concerne les SDIS et envoie la synthèse par e-mail au chef de garde et aux chefs de centre. Personne n'appuie sur rien.
             </div>
 
             <h3>Exemple</h3>
@@ -157,10 +159,59 @@
 
             <h3>ROI</h3>
             <div class="roi">
-                <strong>0h de travail</strong> (workflow auto)<br>
+                <strong>0h de travail</strong> (automatisation)<br>
                 Proactivité garantie<br>
                 Aucune surprise de l'administration
             </div>
+        </div>
+
+        <div class="case-full" id="retex">
+            <h2>CAS 3: Le RETEX dicté depuis le terrain</h2>
+
+            <h3>Le problème</h3>
+            <div class="problem">
+                <strong>❌ Le RETEX se rédige trois jours après, devant une page blanche:</strong><br>
+                → Les détails s'effacent, les horaires se brouillent<br>
+                → Le chef de groupe y passe sa soirée<br>
+                → Beaucoup de RETEX ne sont jamais écrits
+            </div>
+
+            <h3>La solution</h3>
+            <div class="solution">
+                <strong>✓ Dans le fourgon, au retour: on raconte, le portail écrit</strong><br>
+                Le chef de groupe ouvre l'application sur son téléphone, appuie sur Enregistrer et raconte l'intervention pendant dix minutes. À l'arrivée au centre, une trame de RETEX structurée l'attend : chronologie, moyens engagés, points positifs, axes d'amélioration, questions à creuser. Il relit et valide.
+            </div>
+
+            <h3>Exemple</h3>
+            <div class="example">
+                🎙 Enregistrement: 23h40, 9 min 12 s — "Feu d'entrepôt, rue des Forges"<br><br>
+
+                📄 Trame RETEX générée:<br>
+                1. Chronologie (appel 22h04 → fin 23h25)<br>
+                2. Moyens: FPT + EPA + VSAV, 14 SP<br>
+                3. Points positifs: établissement rapide, ventilation efficace<br>
+                4. Axes d'amélioration: PEI 48 introuvable (à signaler au SIG), binôme redescendu (autonomie ARI)<br>
+                5. Questions pour le groupe: consigne PEI non répertorié ?<br><br>
+
+                Rangé dans: RETEX / Groupement Nord / 2026
+            </div>
+
+            <h3>ROI</h3>
+            <div class="roi">
+                <strong>→ RETEX rédigé le soir même, 10 minutes de voix + 10 minutes de relecture</strong><br>
+                → Au lieu de 2h d'écriture trois jours plus tard<br>
+                → <strong>Des RETEX plus nombreux, plus précis, réellement exploités</strong>
+            </div>
+            <p style="margin-top: 15px; font-size: 14px;"><a href="/terrain" style="color:#E60000; font-weight:600; text-decoration:none;">Voir le portail sur le terrain →</a> · <a href="/cas-preparation-retex.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Préparation des RETEX » →</a></p>
+        </div>
+
+        <div class="case-full" id="fmpa">
+            <h2>Et pour la formation : un QCM de FMPA en deux minutes</h2>
+            <div class="solution">
+                <strong>✓ Un formulaire, trois cases</strong><br>
+                Thème (feu de véhicule électrique), niveau (équipier), nombre de questions (15) → un QCM et son corrigé, chaque bonne réponse renvoyant au guide de doctrine ou à la note du SDIS. Le formateur relit, ajuste, imprime.
+            </div>
+            <p style="margin-top: 10px; font-size: 14px;"><a href="/formulaires" style="color:#E60000; font-weight:600; text-decoration:none;">Voir tous les formulaires →</a> · <a href="/cas-fmpa-qcm.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Supports de FMPA et QCM » →</a></p>
         </div>
     </section>
 
@@ -188,13 +239,17 @@
                     <li><a href="/operationnel">Opérationnel</a></li>
                     <li><a href="/prevention">Prévention</a></li>
                     <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/terrain">Sur le terrain</a></li>
+                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
                     <li><a href="/deployer">Déploiement</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Conformité</h4>
+                <h4>Pour aller plus loin</h4>
                 <ul>
-                    <li><a href="/conformite">Checklist légale</a></li>
+                    <li><a href="/se-former">Se former sans être informaticien</a></li>
+                    <li><a href="/faq">Questions fréquentes</a></li>
+                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
                 </ul>
             </div>
             <div class="footer-section">

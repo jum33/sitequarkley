@@ -14,8 +14,8 @@
         .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
         .logo-text strong { font-size: 14px; }
         .logo-text em { font-size: 10px; font-style: italic; color: #666; }
-        nav { display: flex; gap: 25px; list-style: none; }
-        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav { display: flex; gap: 18px; list-style: none; align-items: center; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
@@ -33,7 +33,7 @@
         .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
         .breadcrumb a { color: #E60000; text-decoration: none; }
         footer { background: #1a1a1a; color: white; padding: 50px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
         .footer-section ul { list-style: none; }
         .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
@@ -45,7 +45,7 @@
         .cta-section { text-align: center; background: #FFF5F5; padding: 40px; border-radius: 6px; margin: 40px 0; }
         .cta-section h2 { color: #1a1a1a; font-size: 28px; margin-bottom: 15px; }
         .cta-section p { color: #666; margin-bottom: 20px; }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav { display: none; }
             .hero-page h1 { font-size: 28px; }
         }
@@ -67,8 +67,9 @@
                 <a href="/operationnel">Opérationnel</a>
                 <a href="/prevention">Prévention</a>
                 <a href="/rh-admin">RH & Admin</a>
+                <a href="/terrain">Sur le terrain</a>
+                <a href="/formulaires">Formulaires</a>
                 <a href="/deployer">Déploiement</a>
-                <a href="/conformite">Conformité</a>
                 <a href="/contact" class="cta-button">Réserver</a>
             </nav>
         </div>
@@ -81,7 +82,7 @@
     <section class="hero-page">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <h1>RH & Administratif</h1>
-            <p>Paies, instances, marchés – Comment automatiser les tâches répétitives</p>
+            <p>PV d'instances, paies, marchés, attestations, courriers – Comment automatiser les tâches répétitives sans rien changer à qui décide</p>
         </div>
     </section>
 
@@ -99,9 +100,9 @@
 
             <h3>La solution</h3>
             <div class="solution">
-                <strong>✓ Workflow automatisé:</strong><br>
-                Enregistrement → Transcription → Structuration<br>
-                PV prêt en 24h
+                <strong>✓ On enregistre, le portail rédige:</strong><br>
+                Enregistrement (un téléphone sur la table, ou l'application bureau qui capte la visio Teams/Zoom) → Transcription → Structuration<br>
+                PV prêt en 24h — et, à partir du même enregistrement, un relevé de décisions d'une page et un message aux agents, si vous le souhaitez.
             </div>
 
             <h3>Exemple CASDIS</h3>
@@ -188,6 +189,47 @@
                 Meilleure décision<br>
                 Traçabilité de l'évaluation
             </div>
+            <p style="margin-top: 10px; font-size: 14px;"><a href="/cas-marches-publics.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Pièces de marchés publics » →</a></p>
+        </div>
+
+        <div class="case-full" id="formulaires-rh">
+            <h2>CAS 4: Attestations, courriers, questions statutaires – par formulaire</h2>
+
+            <h3>Le problème</h3>
+            <div class="problem">
+                Des dizaines de petites demandes chaque mois : une attestation d'intervention pour une assurance, une réponse à un courrier d'usager ou d'élu, une question de statut SPV<br>
+                → Chacune prend 15 à 30 minutes<br>
+                → Toujours les mêmes recherches, les mêmes modèles à retrouver
+            </div>
+
+            <h3>La solution</h3>
+            <div class="solution">
+                <strong>✓ Un formulaire pour chaque demande courante</strong><br>
+                • <strong>Attestation d'intervention :</strong> n° d'intervention, demandeur, motif → attestation prête à signer<br>
+                • <strong>Réponse à un usager :</strong> le courrier reçu en pièce jointe, le ton souhaité → projet de réponse dans le style du SDIS<br>
+                • <strong>Question statutaire :</strong> la situation de l'agent, la question → réponse qui cite le règlement intérieur et les textes<br>
+                L'agent remplit trois cases, relit, valide. Il n'a pas besoin de « parler à une IA ».
+            </div>
+
+            <h3>ROI</h3>
+            <div class="roi">
+                <strong>→ 2 minutes au lieu de 20 par attestation</strong><br>
+                → Des réponses homogènes, dans le ton du SDIS<br>
+                → Le gestionnaire garde la main : rien ne part sans sa relecture
+            </div>
+            <p style="margin-top: 10px; font-size: 14px;"><a href="/formulaires" style="color:#E60000; font-weight:600; text-decoration:none;">Voir tous les formulaires →</a> · <a href="/cas-attestations-intervention.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Attestations » →</a> · <a href="/cas-courriers-usagers.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Courriers aux usagers » →</a> · <a href="/cas-questions-statutaires.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Questions statutaires » →</a> · <a href="/cas-gestion-spv.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Gestion des SPV » →</a></p>
+        </div>
+
+        <div class="case-full" id="email">
+            <h2>CAS 5: Les demandes reçues par e-mail, pré-traitées avant d'être ouvertes</h2>
+            <div class="solution">
+                <strong>✓ Une adresse dédiée, par exemple attestations@sdis00.fr</strong><br>
+                Quand une demande y arrive, le portail la lit, identifie ce qui est demandé, retrouve l'intervention concernée et prépare le projet de réponse dans la boîte du gestionnaire. Celui-ci ouvre le mail avec la réponse déjà rédigée à côté. Il vérifie et envoie.
+            </div>
+            <div class="roi">
+                <strong>→ Aucune demande oubliée, aucune saisie</strong><br>
+                → Fonctionne aussi pour les demandes de RETEX, les questions des élus, les demandes de visite ERP
+            </div>
         </div>
     </section>
 
@@ -202,7 +244,7 @@
     <section class="section">
         <div class="nav-links">
             <a href="/prevention">← Prévention</a>
-            <a href="/deployer">Déploiement →</a>
+            <a href="/terrain">Sur le terrain →</a>
         </div>
     </section>
 
@@ -215,13 +257,17 @@
                     <li><a href="/operationnel">Opérationnel</a></li>
                     <li><a href="/prevention">Prévention</a></li>
                     <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/terrain">Sur le terrain</a></li>
+                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
                     <li><a href="/deployer">Déploiement</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Conformité</h4>
+                <h4>Pour aller plus loin</h4>
                 <ul>
-                    <li><a href="/conformite">Checklist légale</a></li>
+                    <li><a href="/se-former">Se former sans être informaticien</a></li>
+                    <li><a href="/faq">Questions fréquentes</a></li>
+                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
                 </ul>
             </div>
             <div class="footer-section">

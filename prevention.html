@@ -14,8 +14,8 @@
         .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
         .logo-text strong { font-size: 14px; }
         .logo-text em { font-size: 10px; font-style: italic; color: #666; }
-        nav { display: flex; gap: 25px; list-style: none; }
-        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav { display: flex; gap: 18px; list-style: none; align-items: center; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
@@ -36,7 +36,7 @@
         .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
         .breadcrumb a { color: #E60000; text-decoration: none; }
         footer { background: #1a1a1a; color: white; padding: 50px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
         .footer-section ul { list-style: none; }
         .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
@@ -48,7 +48,7 @@
         .cta-section { text-align: center; background: #FFF5F5; padding: 40px; border-radius: 6px; margin: 40px 0; }
         .cta-section h2 { color: #1a1a1a; font-size: 28px; margin-bottom: 15px; }
         .cta-section p { color: #666; margin-bottom: 20px; }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav { display: none; }
             .hero-page h1 { font-size: 28px; }
         }
@@ -70,8 +70,9 @@
                 <a href="/operationnel">Opérationnel</a>
                 <a href="/prevention">Prévention</a>
                 <a href="/rh-admin">RH & Admin</a>
+                <a href="/terrain">Sur le terrain</a>
+                <a href="/formulaires">Formulaires</a>
                 <a href="/deployer">Déploiement</a>
-                <a href="/conformite">Conformité</a>
                 <a href="/contact" class="cta-button">Réserver</a>
             </nav>
         </div>
@@ -84,7 +85,7 @@
     <section class="hero-page">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <h1>Prévention</h1>
-            <p>ERP, dossiers de sécurité, notices – Comment @prevention économise 80% du temps d'analyse</p>
+            <p>Notices, dossiers ERP, visites, avis – Comment @prevention économise 80% du temps d'analyse et garde l'historique de chaque établissement</p>
         </div>
     </section>
 
@@ -165,6 +166,61 @@
                 <strong>Total gagnés: 56h/an par préventionniste</strong>
             </div>
         </div>
+
+        <div class="case-full" id="projet-erp">
+            <h2>CAS 2: Un projet par dossier ERP</h2>
+
+            <h3>Le problème</h3>
+            <div class="problem">
+                <strong>❌ Un dossier ERP, c'est dix endroits:</strong><br>
+                → La notice dans la GED, les plans en PDF, les mails avec l'exploitant, les PV des visites précédentes dans un classeur<br>
+                → « Quelle était la prescription n° 4 de la dernière visite ? » = vingt minutes de recherche
+            </div>
+
+            <h3>La solution</h3>
+            <div class="solution">
+                <strong>✓ Un projet « ERP Collège Jules-Ferry » sur le portail</strong><br>
+                Tout y est : notice, plans (même photographiés), échanges avec l'exploitant, PV des visites, avis rendus. Le projet a sa propre base de connaissances, créée automatiquement : on lui pose des questions en langage courant et il répond avec la source.
+            </div>
+
+            <h3>Exemple</h3>
+            <div class="example">
+                <strong>❓</strong> "Quelles prescriptions de la visite de 2024 n'ont pas encore été levées ?"<br><br>
+                <strong>✓</strong> 2 prescriptions restent ouvertes :<br>
+                • n° 4 — Désenfumage cage B : rapport de vérification non fourni (PV 12/03/2024, p. 3)<br>
+                • n° 7 — Signalétique issue R+1 (PV 12/03/2024, p. 4 ; courrier exploitant 02/2025 : "en cours")<br>
+                Sources: PV visite 2024 · Courrier exploitant 18/02/2025
+            </div>
+
+            <h3>ROI</h3>
+            <div class="roi">
+                <strong>→ Historique complet d'un établissement en une question</strong><br>
+                → Préparation d'une visite périodique : 15 minutes au lieu d'une heure<br>
+                → Rien ne se perd au changement de préventionniste
+            </div>
+        </div>
+
+        <div class="case-full" id="terrain-prevention">
+            <h2>CAS 3: La visite commentée à voix haute, et les documents papier</h2>
+
+            <div class="solution">
+                <strong>✓ Pendant la visite, le préventionniste dicte ses observations sur son téléphone</strong> (« issue de secours bloquée au R+1 », « extincteur vérifié en mars ») et photographie le plan d'évacuation affiché ou la notice papier de l'exploitant : le portail lit le texte des photos. De retour au bureau, le projet de procès-verbal de visite est prêt, observations classées par local, avec le rappel des prescriptions précédentes.
+            </div>
+            <div class="roi">
+                <strong>→ Le PV de visite est rédigé pendant la visite, pas le lendemain</strong><br>
+                → Une heure et demie de saisie économisée par visite
+            </div>
+            <p style="margin-top: 15px; font-size: 14px;"><a href="/terrain" style="color:#E60000; font-weight:600; text-decoration:none;">Voir le portail sur le terrain →</a></p>
+        </div>
+
+        <div class="case-full" id="avis">
+            <h2>Et pour les avis et prescriptions : un formulaire</h2>
+            <div class="solution">
+                <strong>✓ Trois cases : le dossier, le type et la catégorie, la nature de la demande</strong><br>
+                Le portail prépare le projet d'avis dans la trame du SDIS, avec les articles applicables et les prescriptions proposées. La décision reste celle du préventionniste ; l'IA prépare, l'humain décide.
+            </div>
+            <p style="margin-top: 10px; font-size: 14px;"><a href="/formulaires" style="color:#E60000; font-weight:600; text-decoration:none;">Voir tous les formulaires →</a> · <a href="/cas-avis-prescriptions.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Rédaction des avis et prescriptions » →</a> · <a href="/cas-instruction-erp.html" style="color:#E60000; font-weight:600; text-decoration:none;">Fiche « Instruction des dossiers ERP » →</a></p>
+        </div>
     </section>
 
     <section class="section">
@@ -191,13 +247,17 @@
                     <li><a href="/operationnel">Opérationnel</a></li>
                     <li><a href="/prevention">Prévention</a></li>
                     <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/terrain">Sur le terrain</a></li>
+                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
                     <li><a href="/deployer">Déploiement</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Conformité</h4>
+                <h4>Pour aller plus loin</h4>
                 <ul>
-                    <li><a href="/conformite">Checklist légale</a></li>
+                    <li><a href="/se-former">Se former sans être informaticien</a></li>
+                    <li><a href="/faq">Questions fréquentes</a></li>
+                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
                 </ul>
             </div>
             <div class="footer-section">

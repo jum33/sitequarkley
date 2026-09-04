@@ -15,8 +15,8 @@
         .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
         .logo-text strong { font-size: 14px; }
         .logo-text em { font-size: 10px; font-style: italic; color: #666; }
-        nav { display: flex; gap: 25px; list-style: none; }
-        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav { display: flex; gap: 18px; list-style: none; align-items: center; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
@@ -33,8 +33,7 @@
         .case-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 30px 0 50px; }
         .case-card { background: white; border: 1px solid #e5e5e5; padding: 30px; border-radius: 6px; border-left: 4px solid #E60000; }
         .case-card h3 { color: #E60000; font-size: 18px; margin-bottom: 12px; font-weight: 700; }
-        .case-card p { color: #666; line-height: 1.7; font-size: 14px; }
-        .case-card a { color: #E60000; text-decoration: none; font-weight: 600; margin-top: 16px; display: inline-block; font-size: 13px; }
+        .case-card p { color: #666; line-height: 1.7; font-size: 14px; }        .case-card a { color: #E60000; text-decoration: none; font-weight: 600; margin-top: 16px; display: inline-block; font-size: 13px; }
         .case-card a:hover { text-decoration: underline; }
         .conformite-box { background: #f0fff0; border-left: 4px solid #E60000; padding: 24px 30px; border-radius: 6px; margin: 20px 0 0; }
         .conformite-box p { font-size: 15px; color: #333; line-height: 1.7; }
@@ -43,7 +42,7 @@
         .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
         .breadcrumb a { color: #E60000; text-decoration: none; }
         footer { background: #1a1a1a; color: white; padding: 50px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
         .footer-section ul { list-style: none; }
         .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
@@ -56,7 +55,7 @@
         .cta-section { text-align: center; background: #FFF5F5; padding: 50px; border-radius: 6px; }
         .cta-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 15px; }
         .cta-section p { color: #666; font-size: 16px; margin-bottom: 30px; }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav { display: none; }
             .hero-page h1 { font-size: 28px; }
         }
@@ -78,8 +77,9 @@
                 <a href="/operationnel">Opérationnel</a>
                 <a href="/prevention">Prévention</a>
                 <a href="/rh-admin">RH & Admin</a>
+                <a href="/terrain">Sur le terrain</a>
+                <a href="/formulaires">Formulaires</a>
                 <a href="/deployer">Déploiement</a>
-                <a href="/conformite">Conformité</a>
                 <a href="/contact" class="cta-button">Réserver</a>
             </nav>
         </div>
@@ -114,6 +114,42 @@
             <p>Le portail encadre le travail : chaque assistant (@doctrine, @prevention, @rh, @marches…) connaît son périmètre, cite ses sources dans vos documents à vous (règlement opérationnel, notices, notes de service), et le résultat reste toujours à valider par un agent avant de partir. Fiable et reproductible, plutôt qu'une conversation ouverte.</p>
         </div>
 
+        <h2 style="font-size: 28px; margin-bottom: 10px; font-weight: 700;">Les cinq façons de s'en servir</h2>
+        <p style="color:#666; font-size: 15px; margin-bottom: 10px;">Poser une question n'est qu'une manière parmi d'autres. La plupart des agents utilisent surtout les quatre suivantes.</p>
+        <div class="case-cards">
+            <div class="case-card">
+                <h3>1. Poser une question</h3>
+                <p>À un assistant qui connaît vos documents et cite ses sources. « @doctrine, quel départ type pour un feu de parking souterrain ? »</p>
+                <a href="/operationnel">Voir @doctrine →</a>
+            </div>
+            <div class="case-card">
+                <h3>2. Confier un document</h3>
+                <p>Une notice ERP, une offre de marché, un courrier reçu, une photo de plan : le portail le lit et prépare l'analyse ou la réponse.</p>
+                <a href="/prevention">Voir l'analyse d'une notice →</a>
+            </div>
+            <div class="case-card">
+                <h3>3. Remplir un formulaire</h3>
+                <p>Trois cases, un bouton, un résultat. Attestation d'intervention, QCM de FMPA, courrier à un usager. Sans savoir parler à une IA.</p>
+                <a href="/formulaires">Voir les formulaires →</a>
+            </div>
+            <div class="case-card">
+                <h3>4. Enregistrer ou dicter</h3>
+                <p>Depuis le téléphone : un RETEX dans le fourgon, une réunion de centre, une visite commentée. Le portail rédige le document.</p>
+                <a href="/terrain">Voir le portail sur le terrain →</a>
+            </div>
+            <div class="case-card">
+                <h3>5. Recevoir automatiquement</h3>
+                <p>La veille réglementaire arrive chaque lundi à 7 h, une demande reçue par e-mail est pré-traitée. Personne n'appuie sur rien.</p>
+                <a href="/operationnel">Voir la veille réglementaire →</a>
+            </div>
+        </div>
+
+        <div class="case-full">
+            <h2>Il parle pompier</h2>
+            <p>Le portail connaît le vocabulaire du SDIS : les sigles (SPV, PATS, FMPA, CRSS, GDO, CASDIS…), le règlement intérieur, les modèles de courriers, le ton des notes de service. Ce vocabulaire est chargé pendant le déploiement et enrichi ensuite par vos référents. Résultat : les réponses et les documents sont rédigés « comme au SDIS », pas comme dans une entreprise quelconque.</p>
+            <p>Et tout ce que le portail produit est rangé : chaque compte-rendu, chaque analyse, chaque courrier se retrouve dans un espace unique, classé par étiquette, exportable en Word ou en PDF. On ne perd rien, on retrouve « tous les PV de 2026 » en un clic.</p>
+        </div>
+
         <h2 style="font-size: 28px; margin-bottom: 10px; font-weight: 700;">Concrètement, ça sert à quoi dans un SDIS ?</h2>
         <p style="color:#666; font-size: 15px; margin-bottom: 10px;">Trois exemples réels, un par pôle métier :</p>
         <div class="case-cards">
@@ -136,7 +172,7 @@
 
         <h2 style="font-size: 28px; margin-bottom: 10px; font-weight: 700;">Et la sécurité de mes données ?</h2>
         <div class="conformite-box">
-            <p>C'est la question qui revient le plus souvent, et elle est légitime : vos documents et vos données ne devraient jamais échapper à votre contrôle. En résumé — hébergement 100% France, données jamais utilisées pour entraîner les modèles, droits d'accès par service, traçabilité complète. Le détail complet (checklist, documents fournis, FAQ) est sur la page <a href="/conformite">Conformité</a>.</p>
+            <p>C'est la question qui revient le plus souvent, et elle est légitime : vos documents et vos données ne devraient jamais échapper à votre contrôle. En résumé — hébergement en France, données jamais utilisées pour entraîner les modèles, données personnelles jamais mémorisées, droits d'accès qui suivent la chaîne de commandement, journal d'activité complet. Les réponses détaillées, pour les agents comme pour la direction et le DPD, sont sur la page <a href="/faq">Questions fréquentes</a>.</p>
         </div>
     </section>
 
@@ -164,13 +200,17 @@
                     <li><a href="/operationnel">Opérationnel</a></li>
                     <li><a href="/prevention">Prévention</a></li>
                     <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/terrain">Sur le terrain</a></li>
+                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
                     <li><a href="/deployer">Déploiement</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Conformité</h4>
+                <h4>Pour aller plus loin</h4>
                 <ul>
-                    <li><a href="/conformite">Checklist légale</a></li>
+                    <li><a href="/se-former">Se former sans être informaticien</a></li>
+                    <li><a href="/faq">Questions fréquentes</a></li>
+                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
                 </ul>
             </div>
             <div class="footer-section">

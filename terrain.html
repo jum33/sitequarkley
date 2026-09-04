@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sur le terrain, depuis votre téléphone | Quarkley</title>
+    <meta name="description" content="Enregistrez un RETEX, une visite de prévention ou une réunion de centre depuis votre téléphone : le portail IA du SDIS rédige le document. Sans rien taper.">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; }
+        header { background: #fff; border-bottom: 3px solid #E60000; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 16px; font-weight: 700; color: #000; display: flex; align-items: center; gap: 10px; }
+        .logo-shield { width: 32px; height: 32px; background: #E60000; border-radius: 3px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 18px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text strong { font-size: 14px; }
+        .logo-text em { font-size: 10px; font-style: italic; color: #666; }
+        nav { display: flex; gap: 18px; list-style: none; align-items: center; }
+        nav a { color: #1a1a1a; text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; }
+        nav a:hover { color: #E60000; }
+        .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
+        .cta-button:hover { background: #CC0000; }
+        .hero-page { background: linear-gradient(135deg, rgba(255, 60, 60, 0.8) 0%, rgba(230, 50, 50, 0.8) 100%); color: white; padding: 80px 20px; }
+        .hero-page h1 { font-size: 44px; margin-bottom: 15px; font-weight: 700; }
+        .hero-page p { font-size: 18px; opacity: 0.95; max-width: 70ch; }
+        .section { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .section > h2 { font-size: 28px; margin: 40px 0 10px; font-weight: 700; }
+        .section > h2:first-child { margin-top: 0; }
+        .intro { color: #666; font-size: 15px; margin-bottom: 20px; max-width: 80ch; }
+        .en-clair { background: #f0f8ff; border-left: 5px solid #E60000; padding: 40px; border-radius: 6px; margin-bottom: 50px; }
+        .en-clair h2 { color: #E60000; margin-bottom: 20px; font-size: 24px; font-weight: 700; }
+        .en-clair p { font-size: 17px; line-height: 1.8; }
+        .case-full { margin-bottom: 50px; border-left: 4px solid #E60000; padding-left: 30px; }
+        .case-full h2 { font-size: 28px; margin-bottom: 20px; color: #1a1a1a; font-weight: 700; }
+        .case-full h3 { font-size: 18px; margin-top: 25px; margin-bottom: 15px; color: #E60000; font-weight: 600; }
+        .case-full p { color: #333; line-height: 1.8; font-size: 16px; margin-bottom: 16px; }
+        .problem { background: #fff5f5; border-left: 4px solid #E60000; padding: 20px; border-radius: 4px; margin: 15px 0; }
+        .solution { background: #f0f8ff; border-left: 4px solid #E60000; padding: 20px; border-radius: 4px; margin: 15px 0; }
+        .example { background: #f0f0f0; border-left: 4px solid #666; padding: 20px; border-radius: 4px; margin: 15px 0; font-family: monospace; font-size: 13px; }
+        .roi { background: #f0fff0; border-left: 4px solid #E60000; padding: 20px; border-radius: 4px; margin: 15px 0; }
+        .roi strong { color: #E60000; }
+        .case-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 30px 0 50px; }
+        .case-card { background: white; border: 1px solid #e5e5e5; padding: 30px; border-radius: 6px; border-left: 4px solid #E60000; }
+        .case-card h3 { color: #E60000; font-size: 18px; margin-bottom: 12px; font-weight: 700; }
+        .case-card p { color: #555; line-height: 1.7; font-size: 14px; margin-bottom: 8px; }
+        .case-card a { color: #E60000; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block; font-size: 13px; }
+        .case-card a:hover { text-decoration: underline; }
+        .case-card .champs { background: #f8f9fa; border: 1px dashed #ccc; border-radius: 4px; padding: 12px 14px; margin: 12px 0; font-size: 13px; color: #333; }
+        .case-card .champs span { display: block; padding: 4px 0; border-bottom: 1px solid #eee; }
+        .case-card .champs span:last-child { border-bottom: none; }
+        .case-card .resultat { font-size: 13px; color: #1a1a1a; }
+        .case-card .resultat strong { color: #E60000; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 30px 0 50px; }
+        .step { background: #fff; border: 1px solid #e5e5e5; border-radius: 6px; padding: 26px; text-align: center; }
+        .step .num { width: 44px; height: 44px; border-radius: 50%; background: #E60000; color: #fff; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+        .step h3 { font-size: 17px; margin-bottom: 8px; }
+        .step p { font-size: 14px; color: #555; }
+        .scene { background: #fff; border: 1px solid #e5e5e5; border-left: 4px solid #E60000; border-radius: 6px; padding: 30px; margin-bottom: 26px; }
+        .scene h3 { color: #E60000; font-size: 20px; margin-bottom: 6px; font-weight: 700; }
+        .scene .qui { font-size: 13px; color: #666; margin-bottom: 14px; font-style: italic; }
+        .scene p { font-size: 15px; color: #333; line-height: 1.75; margin-bottom: 10px; }
+        .scene .gain { background: #f0fff0; border-left: 4px solid #E60000; padding: 12px 16px; border-radius: 4px; font-size: 14px; margin-top: 12px; }
+        .scene .gain strong { color: #E60000; }
+        .conformite-box { background: #f0fff0; border-left: 4px solid #E60000; padding: 24px 30px; border-radius: 6px; margin: 20px 0 0; }
+        .conformite-box p { font-size: 15px; color: #333; line-height: 1.7; }
+        .conformite-box a, .section p a, .faq-a a, .lex-def a { color: #E60000; font-weight: 600; text-decoration: none; }
+        .conformite-box a:hover, .section p a:hover, .faq-a a:hover, .lex-def a:hover { text-decoration: underline; }
+        .faq-group { margin-bottom: 40px; }
+        .faq-group h2 { font-size: 26px; margin-bottom: 18px; font-weight: 700; }
+        .faq-item { border: 1px solid #e5e5e5; border-radius: 6px; margin-bottom: 12px; overflow: hidden; }
+        .faq-item summary { cursor: pointer; padding: 16px 20px; font-weight: 600; font-size: 16px; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; color: #E60000; font-size: 22px; font-weight: 700; margin-left: 16px; }
+        .faq-item[open] summary::after { content: "–"; }
+        .faq-item[open] summary { background: #fff5f5; }
+        .faq-a { padding: 16px 20px 20px; font-size: 15px; color: #333; line-height: 1.75; border-top: 1px solid #eee; }
+        .faq-a p { margin-bottom: 10px; }
+        .lex-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 30px 0 50px; }
+        .lex { background: #fff; border: 1px solid #e5e5e5; border-radius: 6px; padding: 24px; border-top: 4px solid #E60000; }
+        .lex h3 { font-size: 18px; margin-bottom: 8px; font-weight: 700; }
+        .lex-def { font-size: 14px; color: #333; line-height: 1.7; margin-bottom: 10px; }
+        .lex-ex { background: #f8f9fa; border-left: 3px solid #E60000; padding: 10px 14px; border-radius: 4px; font-size: 13px; color: #444; }
+        .lex-ex strong { color: #E60000; }
+        .niveaux { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 30px 0 50px; }
+        .niveau { background: #fff; border: 1px solid #e5e5e5; border-radius: 6px; padding: 30px; }
+        .niveau .badge { display: inline-block; background: #E60000; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 3px; margin-bottom: 12px; }
+        .niveau h3 { font-size: 20px; margin-bottom: 4px; }
+        .niveau .duree { font-size: 13px; color: #666; margin-bottom: 14px; }
+        .niveau ul { padding-left: 18px; font-size: 14px; color: #333; line-height: 1.8; }
+        .niveau .pour { margin-top: 14px; font-size: 13px; color: #666; font-style: italic; }
+        .temoignage { background: #f8f9fa; border-left: 5px solid #E60000; padding: 30px 36px; border-radius: 6px; margin: 30px 0 50px; font-size: 17px; line-height: 1.8; font-style: italic; color: #333; }
+        .temoignage cite { display: block; margin-top: 12px; font-style: normal; font-size: 14px; color: #666; }
+        .breadcrumb { padding: 15px 20px; background: #f8f9fa; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 13px; }
+        .breadcrumb a { color: #E60000; text-decoration: none; }
+        footer { background: #1a1a1a; color: white; padding: 50px 20px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+        .footer-section h4 { margin-bottom: 15px; font-weight: 600; color: #E60000; font-size: 14px; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
+        .footer-section a:hover { color: white; }
+        .footer-section p { font-size: 12px; color: #999; }
+        .btn-primary { background: #E60000; color: white; padding: 15px 40px; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; font-size: 16px; }
+        .btn-primary:hover { background: #CC0000; }
+        .nav-links { display: flex; gap: 20px; margin-top: 50px; flex-wrap: wrap; }
+        .nav-links a { color: #E60000; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .cta-section { text-align: center; background: #FFF5F5; padding: 50px; border-radius: 6px; }
+        .cta-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 15px; }
+        .cta-section p { color: #666; font-size: 16px; margin-bottom: 30px; }
+        @media (max-width: 900px) {
+            nav { display: none; }
+            .hero-page h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-shield">🛡</div>
+                <div class="logo-text">
+                    <strong>Quarkley</strong>
+                    <em>L'IA au service des SDIS</em>
+                </div>
+            </div>
+            <nav>
+                <a href="/">Accueil</a>
+                <a href="/le-portail-ia">C'est quoi un portail ?</a>
+                <a href="/operationnel">Opérationnel</a>
+                <a href="/prevention">Prévention</a>
+                <a href="/rh-admin">RH & Admin</a>
+                <a href="/terrain">Sur le terrain</a>
+                <a href="/formulaires">Formulaires</a>
+                <a href="/deployer">Déploiement</a>
+                <a href="/contact" class="cta-button">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Accueil</a> / <strong>Sur le terrain</strong>
+    </div>
+
+    <section class="hero-page">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1>Sur le terrain, depuis votre téléphone</h1>
+            <p>RETEX à chaud, visite de prévention, réunion de centre : vous enregistrez, le portail rédige. Aucune saisie, aucune compétence informatique.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="en-clair">
+            <h2>Vous parlez, le portail écrit</h2>
+            <p>Un sapeur-pompier n'est pas derrière un bureau. Le portail se glisse donc dans la poche : une application sur votre téléphone, un bouton <strong>Enregistrer</strong>, et ce que vous dites en rentrant d'intervention, pendant une visite ou autour d'une table devient un document rédigé, structuré, prêt à relire. Sans rien taper.</p>
+        </div>
+
+        <h2>Trois scènes vécues au SDIS 00</h2>
+        <p class="intro">Fictives dans les noms, réelles dans le fonctionnement : c'est exactement ce que fait le portail aujourd'hui.</p>
+
+        <div class="scene">
+            <h3>Le RETEX à chaud, dans le fourgon</h3>
+            <div class="qui">Chef de groupe, 23 h 40, retour d'un feu d'entrepôt</div>
+            <p>Dans le véhicule, le chef de groupe ouvre l'application, appuie sur Enregistrer et raconte l'intervention à voix haute pendant dix minutes : l'appel, l'arrivée sur les lieux, ce qui a bien marché, le point d'eau introuvable, le binôme qui a dû redescendre. Il range le téléphone dans sa poche : l'envoi continue tout seul.</p>
+            <p>À l'arrivée au centre, une trame de RETEX l'attend sur le portail : chronologie, moyens engagés, points positifs, axes d'amélioration, questions à creuser. Il relit, corrige deux détails, valide. Le document est rangé avec les autres RETEX du groupement.</p>
+            <div class="gain"><strong>Gain :</strong> un RETEX structuré le soir même, au lieu d'une page blanche trois jours plus tard — et rien d'oublié.</div>
+        </div>
+
+        <div class="scene">
+            <h3>La visite de prévention commentée</h3>
+            <div class="qui">Préventionniste, 10 h, visite périodique d'un collège (ERP type R, 3e catégorie)</div>
+            <p>Pendant la visite, la préventionniste dicte ses observations au fil des locaux : « issue de secours bloquée par des tables au R+1 », « extincteur vérifié en mars », « désenfumage non testé ». Elle photographie le plan d'évacuation affiché et deux pages de la notice papier de l'exploitant : le portail lit le texte des photos.</p>
+            <p>De retour au bureau, le projet de procès-verbal de visite est prêt : observations classées par local, rappel des prescriptions de la visite précédente, points conformes, points à expertiser, articles applicables cités. Elle vérifie, complète, signe.</p>
+            <div class="gain"><strong>Gain :</strong> le PV de visite est rédigé pendant la visite, pas le lendemain. Une heure et demie de saisie économisée par visite.</div>
+        </div>
+
+        <div class="scene">
+            <h3>La réunion de centre du samedi matin</h3>
+            <div class="qui">Chef de centre et SPV, 9 h, salle de garde</div>
+            <p>Un téléphone est posé au milieu de la table, l'application enregistre. On parle du planning de garde d'octobre, de la FMPA incendie, du recrutement de deux jeunes du village, de la panne du groupe électrogène. Une heure plus tard, la réunion est finie.</p>
+            <p>Le lundi matin, chaque SPV reçoit par mail un relevé de décisions d'une page : qui fait quoi, pour quand. Le compte-rendu complet est sur le portail pour ceux qui n'ont pas pu venir.</p>
+            <div class="gain"><strong>Gain :</strong> plus personne ne prend de notes pendant la réunion, et les absents savent ce qui a été décidé.</div>
+        </div>
+
+        <h2>Comment ça marche, en trois gestes</h2>
+        <p class="intro">Rien d'autre à savoir. L'application se télécharge sur l'App Store (iPhone, iPad) et Google Play (Android) ; on se connecte avec son adresse e-mail du SDIS et un code reçu par mail, sans mot de passe à retenir.</p>
+        <div class="steps">
+            <div class="step">
+                <div class="num">1</div>
+                <h3>J'ouvre l'application</h3>
+                <p>Et j'appuie sur Enregistrer. Je peux ranger le téléphone : l'enregistrement continue en arrière-plan.</p>
+            </div>
+            <div class="step">
+                <div class="num">2</div>
+                <h3>Je choisis ce que c'est</h3>
+                <p>À l'envoi, je sélectionne « RETEX », « Réunion de centre », « Visite de prévention »… Le portail sait alors quel modèle de document produire et où le ranger.</p>
+            </div>
+            <div class="step">
+                <div class="num">3</div>
+                <h3>Je relis et je valide</h3>
+                <p>Le document m'attend sur le portail, sur mon ordinateur ou mon téléphone. Je corrige, je complète, je valide. Rien ne part sans moi.</p>
+            </div>
+        </div>
+
+        <h2>Et depuis un ordinateur ?</h2>
+        <div class="case-cards">
+            <div class="case-card">
+                <h3>Les réunions en visio</h3>
+                <p>Une application sur l'ordinateur (Mac ou Windows) enregistre à la fois votre micro et le son de la visio (Teams, Meet, Zoom…). Un CASDIS ou un F3SCT à distance devient un PV, sans rien installer chez les participants.</p>
+                <a href="/rh-admin">Voir le cas des PV d'instances →</a>
+            </div>
+            <div class="case-card">
+                <h3>Un enregistrement déjà fait</h3>
+                <p>Vous avez un fichier audio d'une réunion, jusqu'à 700 Mo ? Vous le déposez sur le portail. Vous avez déjà une transcription ? Vous la collez. Le résultat est le même.</p>
+            </div>
+            <div class="case-card">
+                <h3>Dicter au lieu de taper</h3>
+                <p>La dictée vocale est intégrée au portail : un CRSS, un rapport, un courrier se rédigent à la voix, puis se corrigent au clavier. Pratique quand on a les mains sales ou peu de temps.</p>
+            </div>
+            <div class="case-card">
+                <h3>Un même enregistrement, plusieurs documents</h3>
+                <p>La même réunion peut produire un PV complet, un relevé de décisions d'une page et un message aux agents. Vous choisissez les modèles, le portail les rédige tous.</p>
+            </div>
+        </div>
+
+        <h2>Et la sécurité de ce que j'enregistre ?</h2>
+        <div class="conformite-box">
+            <p>L'enregistrement est envoyé directement sur le portail du SDIS, hébergé en France, et n'est jamais utilisé pour entraîner un modèle d'IA. Le SDIS décide si le fichier audio est conservé après la rédaction ou supprimé. Les noms des victimes et les données personnelles ne sont jamais mémorisés par le portail. Toutes les réponses aux questions que se posent les agents sont sur la page <a href="/faq">Questions fréquentes</a>.</p>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="cta-section">
+            <h2>Voyez-le sur un téléphone</h2>
+            <p>30 minutes en visioconférence : nous enregistrons un faux RETEX en direct et vous regardez le document se rédiger.</p>
+            <button class="btn-primary" onclick="document.location='/contact'">Réserver une démo</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="nav-links">
+            <a href="/rh-admin">← RH & Admin</a>
+            <a href="/formulaires">Un formulaire, un résultat →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Le portail</h4>
+                <ul>
+                    <li><a href="/le-portail-ia">C'est quoi un portail ?</a></li>
+                    <li><a href="/operationnel">Opérationnel</a></li>
+                    <li><a href="/prevention">Prévention</a></li>
+                    <li><a href="/rh-admin">RH & Administratif</a></li>
+                    <li><a href="/terrain">Sur le terrain</a></li>
+                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
+                    <li><a href="/deployer">Déploiement</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Pour aller plus loin</h4>
+                <ul>
+                    <li><a href="/se-former">Se former sans être informaticien</a></li>
+                    <li><a href="/faq">Questions fréquentes</a></li>
+                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quarkley</h4>
+                <p style="font-size: 12px;">L'IA souveraine au service des SDIS.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
