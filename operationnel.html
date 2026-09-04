@@ -19,7 +19,9 @@
         nav a:hover { color: #E60000; }
         .cta-button { background: #E60000; color: white; padding: 8px 18px; border-radius: 3px; font-weight: 600; font-size: 13px; }
         .cta-button:hover { background: #CC0000; }
-        .hero-page { background: linear-gradient(135deg, rgba(255, 60, 60, 0.8) 0%, rgba(230, 50, 50, 0.8) 100%); color: white; padding: 80px 20px; }
+        .hero-page { position: relative; overflow: hidden; background: #0f1e3a; padding: 0; height: min(56vw, 480px); }
+        .hero-page::before { content: ""; position: absolute; inset: -40px; background: url('bandeau-operationnel.jpeg') center/cover no-repeat; filter: blur(28px) brightness(0.55); }
+        .hero-page img { position: relative; display: block; height: 100%; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; }
         .hero-page h1 { font-size: 44px; margin-bottom: 15px; font-weight: 700; }
         .hero-page p { font-size: 18px; opacity: 0.95; }
         .section { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
@@ -48,7 +50,6 @@
         .cta-section p { color: #666; margin-bottom: 20px; }
         @media (max-width: 900px) {
             nav { display: none; }
-            .hero-page h1 { font-size: 28px; }
         }
     </style>
 </head>
@@ -81,10 +82,7 @@
     </div>
 
     <section class="hero-page">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h1>Opérationnel</h1>
-            <p>@doctrine, veille réglementaire, RETEX dicté depuis le terrain, QCM de FMPA – Comment le portail fait gagner du temps aux officiers et aux formateurs</p>
-        </div>
+        <img src="bandeau-operationnel.jpeg" alt="Opérationnel : portail IA opérationnel sécurisé pour le SDIS — @doctrine, veille réglementaire et RETEX terrain, salle de commandement et intervention de nuit." width="1920" height="949">
     </section>
 
     <section class="section">
