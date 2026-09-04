@@ -116,7 +116,18 @@ nav.links { display: flex; gap: 26px; flex: 1; justify-content: center; flex-wra
 nav.links a { font-size: 14.5px; font-weight: 600; color: var(--nuit); }
 nav.links a:hover { color: var(--feu); }
 nav.links a.active { color: var(--feu); }
-@media (max-width: 920px) { nav.links { display: none; } }
+nav.links a.mobile-only { display: none; }
+.burger { display: none; background: none; border: 1px solid #ddd; border-radius: 6px; width: 42px; height: 38px; cursor: pointer; padding: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; margin-left: auto; }
+.burger span { display: block; width: 20px; height: 2px; background: var(--nuit); }
+@media (max-width: 920px) {
+  .burger { display: flex; }
+  .nav-row { position: relative; flex-wrap: wrap; }
+  nav.links { display: none; position: absolute; left: 0; right: 0; top: 100%; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 0 12px; box-shadow: 0 8px 20px rgba(0,0,0,.08); z-index: 50; }
+  nav.links.open { display: flex; }
+  nav.links a { padding: 12px 20px; border-top: 1px solid #f0f0f0; }
+  .nav-row > a.btn { display: none; }
+  nav.links a.mobile-only { display: block; color: var(--feu); }
+}
 @media (max-width: 480px) {
   .nav-row { flex-wrap: wrap; gap: 10px 16px; }
   .nav-row .btn { font-size: 13px; padding: 10px 14px; }

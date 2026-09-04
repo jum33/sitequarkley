@@ -16,7 +16,8 @@
       <span class="mark"><img src="favicon-64.png" width="30" height="30" alt="" /></span>
       Quarkley <span class="accent">SDIS</span>
     </a>
-    <nav class="links">
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal" onclick="var n=document.getElementById('menu-principal');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);"><span></span><span></span><span></span></button>
+    <nav class="links" id="menu-principal">
       <a href="/" class="">Accueil</a>
       <a href="/le-portail-ia" class="">C'est quoi un portail ?</a>
       <a href="/operationnel" class="">Opérationnel</a>
@@ -25,6 +26,7 @@
       <a href="/terrain" class="">Sur le terrain</a>
       <a href="/formulaires" class="">Formulaires</a>
       <a href="/deployer" class="">Déploiement</a>
+      <a href="/contact" class="mobile-only">Réserver une démonstration</a>
     </nav>
     <a href="/contact" class="btn btn-feu">Réserver une démonstration</a>
   </div>
