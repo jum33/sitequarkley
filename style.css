@@ -480,3 +480,13 @@ footer {
   text-align: center;
   color: var(--text-muted);
 }
+
+/* Pied de page commun (gabarit 2026) */
+footer.site-footer { background: #1a1a1a; color: #fff; padding: 50px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+footer.site-footer .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+footer.site-footer .footer-section h4 { margin: 0 0 15px; font-weight: 600; color: #E60000; font-size: 14px; font-family: inherit; letter-spacing: 0; }
+footer.site-footer .footer-section a, footer.site-footer .footer-section p { font-family: inherit; font-weight: 400; }
+footer.site-footer .footer-section ul { list-style: none; margin: 0; padding: 0; }
+footer.site-footer .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; font-size: 13px; }
+footer.site-footer .footer-section a:hover { color: #fff; }
+footer.site-footer .footer-section p { font-size: 12px; color: #999; margin: 0; }
