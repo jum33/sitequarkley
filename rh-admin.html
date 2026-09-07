@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA RH et administratif SDIS : PV, paies, marchés – Quarkley</title>
-    <meta name="description" content="Pour les services RH, finances et marchés d&#x27;un SDIS : PV de CASDIS et F3SCT en 24 h à partir d&#x27;un enregistrement, paies SPP/SPV, analyse d&#x27;offres, attestations et courriers par formulaire.">
-    <!-- seo -->
-    <link rel="canonical" href="https://quarkley.com/rh-admin">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Quarkley – SDIS 00">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:url" content="https://quarkley.com/rh-admin">
-    <meta property="og:title" content="IA RH et administratif SDIS : PV, paies, marchés – Quarkley">
-    <meta property="og:description" content="Pour les services RH, finances et marchés d&#x27;un SDIS : PV de CASDIS et F3SCT en 24 h à partir d&#x27;un enregistrement, paies SPP/SPV, analyse d&#x27;offres, attestations et courriers par formulaire.">
-    <meta property="og:image" content="https://quarkley.com/bandeaucetquoileportail.jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- /seo -->
+    <title>RH & Admin | Quarkley</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; }
@@ -58,21 +46,8 @@
         .cta-section h2 { color: #1a1a1a; font-size: 28px; margin-bottom: 15px; }
         .cta-section p { color: #666; margin-bottom: 20px; }
         @media (max-width: 900px) {
+            nav { display: none; }
             .hero-page h1 { font-size: 28px; }
-        }
-        .burger { display: none; background: none; border: 1px solid #ddd; border-radius: 4px; width: 42px; height: 38px; cursor: pointer; padding: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
-        .burger span { display: block; width: 20px; height: 2px; background: #1a1a1a; transition: transform .2s, opacity .2s; }
-        .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-        .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-        .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-        @media (max-width: 900px) {
-            .burger { display: flex; }
-            nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 3px solid #E60000; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 0 12px; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
-            nav.open { display: flex; }
-            nav a { padding: 12px 20px; font-size: 15px; border-top: 1px solid #f0f0f0; white-space: normal; }
-            nav a.cta-button { margin: 10px 20px 0; text-align: center; border-radius: 4px; }
-            header { position: sticky; }
-            .header-content { position: relative; }
         }
     </style>
 </head>
@@ -86,8 +61,7 @@
                     <em>L'IA au service des SDIS</em>
                 </div>
             </div>
-            <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal" onclick="var n=document.getElementById('menu-principal');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);"><span></span><span></span><span></span></button>
-            <nav id="menu-principal">
+            <nav>
                 <a href="/">Accueil</a>
                 <a href="/le-portail-ia">C'est quoi un portail ?</a>
                 <a href="/operationnel">Opérationnel</a>
