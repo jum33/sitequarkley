@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDIS 00 · édité par Quarkley</title>
+    <title>Portail IA pour les SDIS – SDIS 00, démonstrateur Quarkley</title>
+    <meta name="description" content="Le portail IA souverain des sapeurs-pompiers : assistants @doctrine, @prevention, @rh, @marches, documents hébergés en France, aucune compétence informatique requise. Démonstrateur SDIS 00.">
+    <!-- seo -->
+    <link rel="canonical" href="https://quarkley.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Quarkley – SDIS 00">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://quarkley.com/">
+    <meta property="og:title" content="Portail IA pour les SDIS – SDIS 00, démonstrateur Quarkley">
+    <meta property="og:description" content="Le portail IA souverain des sapeurs-pompiers : assistants @doctrine, @prevention, @rh, @marches, documents hébergés en France, aucune compétence informatique requise. Démonstrateur SDIS 00.">
+    <meta property="og:image" content="https://quarkley.com/bandeaucetquoileportail.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /seo -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; }
@@ -60,10 +72,31 @@
         .cta-section h2 { color: #1a1a1a; font-size: 32px; margin-bottom: 15px; }
         .cta-section p { color: #666; font-size: 16px; margin-bottom: 30px; }
         @media (max-width: 900px) {
-            nav { display: none; }
             .hero-page h1 { font-size: 32px; }
         }
+        .burger { display: none; background: none; border: 1px solid #ddd; border-radius: 4px; width: 42px; height: 38px; cursor: pointer; padding: 0; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
+        .burger span { display: block; width: 20px; height: 2px; background: #1a1a1a; transition: transform .2s, opacity .2s; }
+        .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        @media (max-width: 900px) {
+            .burger { display: flex; }
+            nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 3px solid #E60000; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 0 12px; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+            nav.open { display: flex; }
+            nav a { padding: 12px 20px; font-size: 15px; border-top: 1px solid #f0f0f0; white-space: normal; }
+            nav a.cta-button { margin: 10px 20px 0; text-align: center; border-radius: 4px; }
+            header { position: sticky; }
+            .header-content { position: relative; }
+        }
+        .page-title { font-size: 30px; font-weight: 700; margin: 0 0 24px; color: #1a1a1a; }
     </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+     {"@type":"Organization","name":"Quarkley","url":"https://quarkley.com/","logo":"https://quarkley.com/favicon-512.png","description":"Éditeur du portail IA souverain pour les services départementaux d'incendie et de secours (SDIS) de France.","areaServed":"FR","contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://quarkley.com/contact","availableLanguage":"fr"}},
+     {"@type":"WebSite","name":"SDIS 00 – portail IA Quarkley","url":"https://quarkley.com/","inLanguage":"fr-FR","publisher":{"@type":"Organization","name":"Quarkley"}},
+     {"@type":"SoftwareApplication","name":"Portail IA Quarkley pour les SDIS","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","url":"https://quarkley.com/le-portail-ia","description":"Portail IA interne pour SDIS : assistants spécialisés (doctrine, prévention, RH, marchés), documents hébergés en France, formulaires, comptes-rendus depuis le téléphone.","audience":{"@type":"Audience","audienceType":"Services départementaux d'incendie et de secours (SDIS), sapeurs-pompiers"}}
+    ]}
+    </script>
 </head>
 <body>
     <header>
@@ -75,7 +108,8 @@
                     <em>Édité par Quarkley</em>
                 </div>
             </div>
-            <nav>
+            <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal" onclick="var n=document.getElementById('menu-principal');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);"><span></span><span></span><span></span></button>
+            <nav id="menu-principal">
                 <a href="/">Accueil</a>
                 <a href="/le-portail-ia">C'est quoi un portail ?</a>
                 <a href="/operationnel">Opérationnel</a>
@@ -104,6 +138,7 @@
     </div>
 
     <section class="section">
+        <h1 class="page-title">Le portail IA des sapeurs-pompiers, hébergé en France</h1>
         <div class="constat">
             <h2>Le constat</h2>
             <p><strong>L'IA est déjà utilisée dans vos centres de secours.</strong> Par vos officiers, vos préventionnistes, vos gestionnaires. Mais sans contrôle, sans conformité RGPD, et souvent avec des données qui quittent la France.</p>
@@ -203,7 +238,7 @@
     <section class="section">
         <div class="cta-section">
             <h2>Démarrer maintenant</h2>
-            <p>Démonstration gratuite · Sans engagement · Conformité garantie</p>
+            <p>Démonstration gratuite · Un forfait par SDIS, quel que soit le nombre d'utilisateurs · Sans engagement au-delà du mois</p>
             <button class="btn-primary" onclick="document.location='/contact'">Réserver une démo</button>
         </div>
     </section>
@@ -236,12 +271,16 @@
                     <li><a href="/se-former">Se former sans être informaticien</a></li>
                     <li><a href="/faq">Questions fréquentes</a></li>
                     <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
+                    <li><a href="/ressources">Ressources : articles</a></li>
+                    <li><a href="/cas-usage.html">Tous les cas d'usage</a></li>
+                    <li><a href="/dsi">Pour votre DSI</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Informations</h4>
                 <ul>
                     <li><a href="/contact">Contact</a></li>
+                    <li><a href="/mentions-legales">Mentions légales et confidentialité</a></li>
                 </ul>
             </div>
             <div class="footer-section">
