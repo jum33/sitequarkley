@@ -1,0 +1,36 @@
+=== VERSION LONGUE (description du poste « Co-fondateur – Quarkley ») ===
+
+Quarkley est l'éditeur du portail IA SDIS 00, le portail d'intelligence artificielle souverain conçu pour les services départementaux d'incendie et de secours. Je co-fonde et pilote ce produit.
+
+SDIS 00, c'est quoi ?
+Un espace de travail en ligne où un SDIS confie des tâches précises à l'IA — sans savoir coder, sans rien installer, et en gardant la main. Principe fondateur : l'IA prépare, l'agent décide.
+
+Quatre assistants qui parlent pompier
+• @doctrine — répond en 10 secondes en citant ses sources dans le règlement opérationnel, contre 20 minutes de recherche
+• @prevention — grille de conformité d'une notice ERP de 80 pages en 45 minutes, contre 3h30 à la main
+• @rh — projet de PV de CASDIS en 24 h à partir de l'enregistrement, contre deux semaines
+• @marches — offres de marchés publics évaluées 75 % plus vite
+
+Cinq façons de s'en servir
+Poser une question · confier un document (notice ERP, offre, photo de plan) · remplir un formulaire (attestation d'intervention, QCM de FMPA, courrier à un usager) · dicter depuis le téléphone (RETEX dans le fourgon, visite de prévention commentée) · recevoir automatiquement (veille réglementaire chaque lundi à 7 h).
+
+Souveraineté et conformité
+Hébergement en France, RGPD natif, journal d'activité complet, droits d'accès calqués sur la chaîne de commandement, données jamais utilisées pour entraîner les modèles. Modèles d'IA interchangeables, européens par défaut : zéro dépendance fournisseur.
+
+Déploiement
+Cadrage 5 jours, mise en service 48 h, formation 3 jours (30 minutes suffisent à un utilisateur), suivi sur 8 semaines avec ROI mesuré en heures gagnées. Un forfait par SDIS sans limite de comptes : tous les SPP, SPV et PATS peuvent avoir un accès.
+
+14 cas d'usage métier documentés, du terrain à la direction.
+Démonstrateur public : quarkley.com
+
+
+=== VERSION COURTE (si vous préférez tenir en un écran) ===
+
+Quarkley est l'éditeur du portail IA SDIS 00, le portail d'intelligence artificielle souverain des services d'incendie et de secours.
+
+SDIS 00 met quatre assistants qui parlent pompier entre les mains des agents : @doctrine (réponse sourcée en 10 secondes), @prevention (notice ERP de 80 pages analysée en 45 minutes), @rh (PV de CASDIS en 24 h), @marches (offres évaluées 75 % plus vite). On y pose une question, on y dépose un document, on remplit un formulaire, on dicte un RETEX depuis le fourgon, ou on reçoit sa veille réglementaire chaque lundi à 7 h.
+
+Hébergement en France, RGPD natif, journal d'activité complet, modèles d'IA interchangeables : zéro dépendance fournisseur. Mise en service en 48 h, 30 minutes de formation par utilisateur, un forfait par SDIS sans limite de comptes.
+
+Principe fondateur : l'IA prépare, l'agent décide.
+quarkley.com
