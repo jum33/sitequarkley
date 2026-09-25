@@ -1,0 +1,64 @@
+# Quarkley – portail IA pour les SDIS
+
+> Quarkley édite un portail d'intelligence artificielle pour les services départementaux d'incendie et de secours (SDIS) : assistants spécialisés (@doctrine, @prevention, @rh, @marches), documents hébergés en France, formulaires et comptes rendus dictés depuis le téléphone. SDIS 00 est le démonstrateur public du portail. Principe : l'IA prépare, l'agent décide.
+
+Points clés :
+- Destiné aux sapeurs-pompiers (SPP, SPV), PATS, officiers, préventionnistes, services RH, finances et marchés ; aucune compétence informatique requise.
+- Hébergement chez un hébergeur français compatible HDS, plateforme alignée ISO 27001 (certification ISO 27001 / SOC 2 en préparation), RGPD natif, sans transfert hors Union européenne.
+- Seuls les extraits utiles des documents sont envoyés aux modèles d'IA ; zéro rétention garanti sur les modèles européens utilisés par défaut.
+- Connexion avec le compte habituel du SDIS (Microsoft ou Google) ou un code reçu par e-mail ; connecteurs Microsoft 365, Google Workspace, Dropbox, Notion, Slack.
+- Déploiement en 4 phases : cadrage 5 jours, mise en service 48 h, formation 3 jours, suivi 8 semaines. Aucune installation sur les postes.
+
+## Le portail
+
+- [Le portail IA des sapeurs-pompiers, hébergé en France](https://quarkley.com/): Le portail IA souverain des sapeurs-pompiers : assistants @doctrine, @prevention, @rh, @marches, documents hébergés en France, sans compétence informatique.
+- [C'est quoi, un portail IA pour un SDIS ?](https://quarkley.com/le-portail-ia): Un portail IA, expliqué simplement, sans jargon technique : ce que c'est, en quoi ce n'est pas un chatbot, et à quoi ça sert concrètement dans un SDIS.
+- [Opérationnel : doctrine, veille réglementaire, RETEX](https://quarkley.com/operationnel): Pour officiers et chefs de centre : @doctrine répond en 10 secondes avec ses sources, veille réglementaire chaque lundi, RETEX dicté, QCM de FMPA en 2 minutes.
+- [Prévention](https://quarkley.com/prevention): Pour les préventionnistes : @prevention analyse une notice ERP en 45 min au lieu de 3 h 30, visite dictée au téléphone, avis et prescriptions par formulaire.
+- [RH & Administratif](https://quarkley.com/rh-admin): Pour les RH, finances et marchés d'un SDIS : PV de CASDIS et F3SCT en 24 h depuis un enregistrement, paies SPP/SPV, analyse d'offres, attestations.
+- [Sur le terrain, depuis votre téléphone](https://quarkley.com/terrain): Enregistrez un RETEX, une visite de prévention ou une réunion de centre depuis votre téléphone : le portail IA du SDIS rédige le document. Sans rien taper.
+- [Un formulaire, un résultat](https://quarkley.com/formulaires): Sur le portail IA du SDIS, la plupart des tâches se lancent avec un formulaire : trois cases, un bouton, un document prêt à relire. Sans savoir parler à une IA.
+
+## Déploiement, sécurité et formation
+
+- [Déploiement: 4 phases, 48h technique, 100% votre SDIS](https://quarkley.com/deployer): Cadrage 5 jours, mise en service 48 h, formation 3 jours, suivi 8 semaines : un portail IA opérationnel pour votre SDIS, hébergé en France, sans installation.
+- [Pour votre DSI et votre RSSI](https://quarkley.com/dsi): Ce que la DSI d'un SDIS vérifie : instance dédiée, hébergement en France, zéro rétention, connecteurs Microsoft 365 et Google, journal d'activité, réversibilité
+- [Se former sans être informaticien](https://quarkley.com/se-former): Comment les agents d'un SDIS apprennent le portail IA : 30 minutes pour tous, une demi-journée pour les référents, un parcours complet pour l'administrateur.
+- [Questions fréquentes](https://quarkley.com/faq): Remplacement des agents, mots de passe, confidentialité, erreurs, coûts, hébergement : les réponses aux questions des pompiers, de la direction et du DPD.
+- [Petit lexique de l'IA pour sapeurs-pompiers](https://quarkley.com/lexique): Assistant, base de connaissances, formulaire, jeton, zéro rétention… les mots du portail IA expliqués simplement, avec un exemple SDIS pour chacun.
+
+## Cas d'usage détaillés
+
+- [Les cas d'usage par pôle](https://quarkley.com/cas-usage): Quatorze cas d'usage concrets pour les SDIS : opérationnel, prévention & prévision, RH & formation, administratif & finances.
+- [Aide à la rédaction des CRSS](https://quarkley.com/cas-aide-crss): Le chef d'agrès dicte son CRSS en fin de garde : le portail IA transcrit, suit la trame du SDIS et signale les rubriques manquantes. Deux fois plus rapide.
+- [Analyse des incohérences réglementaires](https://quarkley.com/cas-analyse-incoherences): Le portail IA croise GDO, GTO, SDACR, règlement opérationnel et notes de service pour signaler contradictions, doublons et dispositions obsolètes.
+- [Assistant doctrine opérationnelle](https://quarkley.com/cas-assistant-doctrine): Règlement opérationnel, GDO, GTO, notes de service : chaque agent interroge la doctrine du SDIS en langage courant et obtient une réponse sourcée.
+- [Attestations d'intervention pour les ayants droit](https://quarkley.com/cas-attestations-intervention): Le portail IA vérifie l'ayant droit, retrouve l'intervention dans les CRSS et prépare l'attestation d'intervention pour l'assurance. L'agent valide.
+- [Rédaction des avis et prescriptions](https://quarkley.com/cas-avis-prescriptions): À partir de la grille de visite, le portail IA prépare l'avis de commission de sécurité avec les prescriptions types, chacune reliée à son article.
+- [Comptes-rendus d'instances](https://quarkley.com/cas-comptes-rendus-instances): CASDIS, F3SCT, comité social territorial : l'enregistrement de séance devient un projet de procès-verbal le lendemain, au lieu de deux semaines.
+- [Courriers aux usagers et aux élus](https://quarkley.com/cas-courriers-usagers): Réclamations, demandes non urgentes, courriers aux maires : le portail IA propose des réponses dans le style institutionnel du SDIS, en quelques minutes.
+- [Supports de FMPA et QCM](https://quarkley.com/cas-fmpa-qcm): Le portail IA prépare supports de séquence, fiches de synthèse et QCM de FMPA depuis la doctrine du SDIS : 30 minutes au lieu d'une demi-journée.
+- [Assistant gestion des SPV](https://quarkley.com/cas-gestion-spv): Conventions de disponibilité, courriers aux employeurs, renouvellements d'engagement : le portail IA allège la gestion administrative des SPV.
+- [Aide à l'instruction des dossiers ERP](https://quarkley.com/cas-instruction-erp): Le portail IA confronte la notice de sécurité ERP aux articles applicables et produit une grille : conforme, à vérifier, non-conformités probables.
+- [Pièces de marchés publics](https://quarkley.com/cas-marches-publics): CCTP, règlements de consultation, analyse des offres : le portail IA s'appuie sur les marchés antérieurs du SDIS pour préparer des pièces adaptées.
+- [Préparation des RETEX](https://quarkley.com/cas-preparation-retex): Comptes rendus, main courante, enregistrements CODIS : le portail IA reconstitue la chronologie et propose une trame de RETEX en moins d'une heure.
+- [Réponses aux questions statutaires](https://quarkley.com/cas-questions-statutaires): Filière SPP, positions statutaires, temps de travail : le service RH obtient des réponses sourcées et homogènes, appuyées sur les textes et délibérations.
+- [Veille réglementaire automatisée](https://quarkley.com/cas-veille-reglementaire): Chaque semaine, le portail IA repère les textes nouveaux ou modifiés qui concernent les SDIS et diffuse une synthèse par service : prévention, opération, RH.
+
+## Articles
+
+- [Ressources](https://quarkley.com/ressources): Articles sur l'IA dans les services d'incendie et de secours : rapports d'intervention, instances, prévention ERP, RH et formation, RGPD.
+- [CASDIS, F3SCT : comment l'IA accélère les comptes-rendus d'instances](https://quarkley.com/article-casdis-f3sct): Deux heures de débat en instance, deux semaines pour en sortir un procès-verbal fidèle : un délai que la plupart des secrétariats de SDIS connaissent trop bien.
+- [Pourquoi chaque SDIS a besoin d'un portail IA souverain](https://quarkley.com/article-portail-souverain): Vos agents utilisent déjà l'IA, souvent avec des comptes personnels, hors de tout cadre. Le portail IA transforme ce risque en levier maîtrisé.
+- [L'IA au service de la prévention : instruire les dossiers ERP plus vite](https://quarkley.com/article-prevention-erp): Plus de dossiers, pas plus de préventionnistes : l'IA ne remplace pas l'expertise du service prévention, elle la concentre là où elle compte.
+- [Rapports d'intervention : comment l'IA allège la charge des officiers](https://quarkley.com/article-rapports-intervention): Fatigue de fin de garde, délais réglementaires : comment l'IA allège la rédaction des comptes rendus des officiers, sans jamais écrire à leur place.
+- [RGPD, souveraineté, IA Act : quel cadre pour l'IA dans un SDIS ?](https://quarkley.com/article-rgpd-cadre): Déployer l'IA dans un établissement public de sécurité civile impose un cadre juridique et technique précis. Voici les questions à poser, et nos réponses.
+- [RH et formation en SDIS : ce que l'IA peut vraiment prendre en charge](https://quarkley.com/article-rh-formation): Supports de FMPA, conventions SPV, questions statutaires : l'IA ne répond pas à la place de vos équipes RH, elle leur rend du temps.
+
+## Contact
+
+- [Parlons de votre SDIS](https://quarkley.com/contact): 30 minutes en visio, sans engagement : démonstration du portail IA sur vos propres documents (règlement opérationnel, notice ERP, réunion). DPD et DSI invités.
+
+## Optional
+
+- [Mentions légales](https://quarkley.com/mentions-legales): éditeur SAS Quarkley (Biarritz), hébergeur, confidentialité.

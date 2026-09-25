@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /pourquoi
-Disallow: /comment
-Disallow: /conformite
 
 Sitemap: https://quarkley.com/sitemap.xml
