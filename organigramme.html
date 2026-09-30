@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L'organigramme IA du SDIS 00 – Quarkley</title>
+<meta name="description" content="Cliquez sur un bureau du SDIS 00 : ce que l'IA change pour chaque service, avant et après, heures rendues aux agents et garde-fous.">
+<!-- seo -->
+<link rel="canonical" href="https://quarkley.com/organigramme">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quarkley – SDIS 00">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://quarkley.com/organigramme">
+<meta property="og:title" content="L'organigramme IA du SDIS 00 – Quarkley">
+<meta property="og:description" content="Cliquez sur un bureau du SDIS 00 : ce que l'IA change pour chaque service, avant et après, heures rendues aux agents et garde-fous.">
+<meta property="og:image" content="https://quarkley.com/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /seo -->
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="apple-touch-icon" href="/favicon-512.png">
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/sdis00-chrome.css">
+<link rel="stylesheet" href="/sdis00.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "L'organigramme IA du SDIS 00 – Quarkley", "description": "Cliquez sur un bureau du SDIS 00 : ce que l'IA change pour chaque service, avant et après, heures rendues aux agents et garde-fous.", "url": "https://quarkley.com/organigramme", "inLanguage": "fr-FR", "isPartOf": {"@type": "WebSite", "name": "SDIS 00 – portail IA Quarkley", "url": "https://quarkley.com/"}, "publisher": {"@type": "Organization", "name": "Quarkley", "url": "https://quarkley.com/", "logo": "https://quarkley.com/favicon-512.png"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quarkley.com/"}, {"@type": "ListItem", "position": 2, "name": "Le SDIS 00", "item": "https://quarkley.com/organigramme"}]}]}</script>
+<script src="/sdis00-chrome.js" defer></script>
+<script src="/sdis00.js" defer></script>
+</head>
+<body>
+
+<div class="q-strip">SDIS DE DÉMONSTRATION · FICTIF<span class="q-long"> · PROPULSÉ PAR QUARKLEY</span></div>
+<header class="q-top">
+  <div class="q-wrap">
+    <a class="q-brand" href="/"><img src="/logo-white.webp" alt="" width="322" height="292"><span><b>SDIS 00</b><small>Le SDIS à l'ère de l'IA</small></span></a>
+    <nav class="q-nav" id="q-nav" aria-label="Navigation principale">
+      <a href="/">Accueil</a>
+      <a href="/organigramme">Le SDIS 00</a>
+      <a href="/le-portail-ia">Le portail IA</a>
+      <a href="/bons-gestes">Bons gestes IA</a>
+      <span class="q-sep" aria-hidden="true"></span>
+      <a href="/ecole-ia" class="q-offer">École IA</a>
+      <a href="/espace-direction" class="q-offer">Espace direction</a>
+    </nav>
+    <div class="q-right">
+      <a href="/contact" class="q-cta" id="nav-contact">Contact <span class="q-badge" id="nav-n" hidden></span></a>
+      <button class="q-menu" id="q-menu" type="button" aria-expanded="false" aria-controls="q-nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="page on" id="p-sdis">
+  <div class="wrap phead">
+    <p class="crumb"><a href="/">Accueil</a> › Le SDIS 00</p>
+    <h1>Qu'est-ce que l'IA change, et pour qui ?</h1>
+    <p class="lede">Cliquez sur un bureau de l'organigramme.</p>
+  </div>
+  <section id="org" style="padding-top:16px">
+    <div class="wrap">
+      <div class="controls">
+        <div>
+          <p class="kicker" style="margin-bottom:6px">Taille de votre SDIS</p>
+          <div class="seg" id="cat" role="group" aria-label="Catégorie du SDIS">
+            <button type="button" id="cat-A" data-c="A">Catégorie A</button>
+            <button type="button" id="cat-B" data-c="B" aria-pressed="true">Catégorie B</button>
+            <button type="button" id="cat-C" data-c="C">Catégorie C</button>
+          </div>
+        </div>
+        <div class="counter" aria-live="polite">
+          <div><p class="n" id="total">0 h</p><small>rendues aux agents chaque année</small></div>
+          <div><small id="explored">0 / 13 bureaux</small><div class="prog"><i id="progbar"></i></div></div>
+        </div>
+      </div>
+      <div class="org" id="orgchart"></div>
+      <p class="hint">● Les points orange marquent les bureaux pas encore explorés. Chiffres donnés à titre d'exemple.</p>
+      <div id="donebox"></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="q-foot">
+  <div class="q-wrap">
+    <div class="q-cols">
+      <div><h4>Le SDIS 00</h4><ul>
+        <li><a href="/organigramme">L'organigramme IA</a></li>
+        <li><a href="/bons-gestes">Les bons gestes de l'IA</a></li>
+        <li><a href="/ecole-ia">École IA</a></li>
+        <li><a href="/espace-direction">Espace direction</a></li>
+      </ul></div>
+      <div><h4>Le portail</h4><ul>
+        <li><a href="/le-portail-ia">C'est quoi un portail ?</a></li>
+        <li><a href="/operationnel">Opérationnel</a></li>
+        <li><a href="/prevention">Prévention</a></li>
+        <li><a href="/rh-admin">RH &amp; Administratif</a></li>
+        <li><a href="/terrain">Sur le terrain</a></li>
+        <li><a href="/formulaires">Un formulaire, un résultat</a></li>
+        <li><a href="/deployer">Déploiement</a></li>
+      </ul></div>
+      <div><h4>Pour aller plus loin</h4><ul>
+        <li><a href="/se-former">Se former sans être informaticien</a></li>
+        <li><a href="/faq">Questions fréquentes</a></li>
+        <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
+        <li><a href="/ressources">Ressources : articles</a></li>
+        <li><a href="/cas-usage">Tous les cas d'usage</a></li>
+        <li><a href="/dsi">Pour votre DSI</a></li>
+      </ul></div>
+      <div><h4>Informations</h4><ul>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/mentions-legales">Mentions légales et confidentialité</a></li>
+      </ul></div>
+    </div>
+    <p class="q-about"><b>SDIS 00</b> · L'IA souveraine au service des SDIS. Démonstrateur public du portail <b>Quarkley</b>.</p>
+    <p class="q-disc">SDIS 00 est un SDIS fictif de démonstration, sans lien avec un département ou un service public existant. Personnages fictifs, chiffres donnés à titre d'exemple, cas d'usage inspirés de SDIS réels et anonymisés. Portail, formation et accompagnement : Quarkley.</p>
+    <p class="q-legal">Quarkley · SAS au capital de 5 000 € · RCS Bayonne 939 031 993 · 45 avenue du Président J.F. Kennedy, 64200 Biarritz · Directeur de la publication : Jean-Marc Urrutibehety</p>
+    <p class="q-legal">© 2026 Quarkley. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<div class="selbar" id="selbar" aria-live="polite"><span id="selbar-t"></span><a href="/contact">Demander</a></div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" aria-hidden="true">
+  <div class="dtop"><span class="kicker" id="d-group"></span><button class="x" id="d-close" type="button" aria-label="Fermer">×</button></div>
+  <div class="who"><div class="ic" id="d-ic"></div><div><h3 id="d-title"></h3><small id="d-person"></small></div></div>
+  <div class="hero-num">
+    <div><p class="n" id="d-hours"></p><small>rendues chaque année à ce bureau</small></div>
+    <div style="text-align:right"><span class="pill" id="d-staff"></span><p class="ex" style="margin-top:6px">exemple</p></div>
+  </div>
+  <div class="ba">
+    <div class="ba-h"><span class="state" id="d-state">Avant</span><span class="t" id="d-time"></span></div>
+    <ol id="d-steps"></ol>
+    <div class="toggle"><button type="button" id="t-before">Avant</button><button type="button" id="t-after">Avec l'IA</button></div>
+  </div>
+  <div>
+    <p class="kicker" style="margin-bottom:8px" id="d-task"></p>
+    <div class="chat" id="chat" aria-live="polite"></div>
+  </div>
+  <p class="guard"><b>Garde-fou</b><span id="d-guard"></span></p>
+  <div>
+    <p class="kicker" style="margin-bottom:8px">Son accompagnement</p>
+    <div class="steps" id="d-acc"></div>
+    <a class="toecole" href="/ecole-ia">Voir ces formations à l'École IA →</a>
+  </div>
+  <div class="next"><button type="button" id="d-prev">← Précédent</button><button type="button" class="go" id="d-next">Bureau suivant →</button></div>
+</aside>
+</body>
+</html>
