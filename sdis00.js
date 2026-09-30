@@ -361,9 +361,9 @@ if ($("pgrid")) {
   $("di-3").innerHTML = svg("route", "var(--amber)");
   const P = [
    ["Sécurisé","var(--red)","Accès par agent et par service. Chaque assistant ne voit que son périmètre."],
-   ["Souverain","var(--blue)","Hébergé en France sur une offre SecNumCloud, ou chez l'hébergeur de votre choix."],
+   ["Souverain","var(--blue)","Hébergé en France, ou chez l'hébergeur de votre choix."],
    ["Multi-modèles","var(--amber)","Le bon modèle pour chaque usage. Les données sensibles restent sur des modèles hébergés en France."],
-   ["Coûts pilotés","var(--ink)","Forfait fixe. Usages suivis par service, chaque mois, pour la direction."]
+   ["Coûts pilotés","var(--ink)","Usages suivis par service, chaque mois, pour la direction."]
   ];
   $("pgrid").innerHTML = P.map((p, i) => `<button class="p" type="button" id="p-${i}" aria-expanded="false"><span class="dot" style="background:${p[1]}"></span><h3>${p[0]}</h3><p>${p[2]}</p></button>`).join("");
   $("pgrid").querySelectorAll(".p").forEach(b => b.onclick = () => b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") !== "true"));
