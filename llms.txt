@@ -11,9 +11,9 @@ Points clés :
 
 ## Le portail
 
-- [SDIS 00 · Le SDIS à l'ère de l'IA](https://quarkley.com/): SDIS 00, le SDIS de démonstration de Quarkley : ce que l'IA change dans chaque service d'un SDIS, bons gestes, formations et accompagnement.
-- [L'organigramme IA du SDIS 00](https://quarkley.com/organigramme): Cliquez sur un bureau du SDIS 00 : ce que l'IA change pour chaque service, avant et après, heures rendues aux agents et garde-fous.
-- [Les bons gestes de l'IA au SDIS](https://quarkley.com/bons-gestes): Six réflexes pour utiliser l'IA au SDIS sans risque, et un test : qu'a-t-on le droit de mettre dans une IA grand public ?
+- [SDIS 00 · Le SDIS à l'ère de l'IA](https://quarkley.com/): SDIS 00, le SDIS de démonstration de Quarkley : ce que l'IA change dans chaque service d'un SDIS, GDO de l'IA, formations et accompagnement.
+- [L'organigramme IA du SDIS 00](https://quarkley.com/organigramme): Cliquez sur un groupement du SDIS 00 : ce que l'IA change pour chaque service, avant et après, heures rendues aux agents et garde-fous.
+- [Le GDO de l'IA au SDIS](https://quarkley.com/bons-gestes): Six réflexes pour utiliser l'IA au SDIS sans risque, et un test : qu'a-t-on le droit de mettre dans une IA grand public ?
 - [École IA : formations IA pour les SDIS](https://quarkley.com/ecole-ia): Formations IA pour les agents, référents, direction et métiers d'un SDIS, dans le portail ou hors portail, avec attestation.
 - [Espace direction](https://quarkley.com/espace-direction): Pour la direction d'un SDIS : démonstration, quatre garanties du portail, parcours de la démo au suivi et dossier conformité.
 - [C'est quoi, un portail IA pour un SDIS ?](https://quarkley.com/le-portail-ia): Un portail IA, expliqué simplement, sans jargon technique : ce que c'est, en quoi ce n'est pas un chatbot, et à quoi ça sert concrètement dans un SDIS.
