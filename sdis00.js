@@ -20,7 +20,7 @@ const svg = (k, c) => `<svg viewBox="0 0 24 24" fill="none" stroke="${c || 'curr
 
 /* kind = "real" (cas en production dans un vrai SDIS, anonymisé) ou "type" (cas non déployé, à valider en test)
    origin = provenance anonymisée d'un cas réel, ex. "SDIS de catégorie B · Nouvelle-Aquitaine"
-   n = agents du bureau par catégorie [A,B,C]; f = occurrences par agent et par an; t = minutes [avant, après]
+   n = agents du groupement par catégorie [A,B,C]; f = occurrences par agent et par an; t = minutes [avant, après]
    s = étapes avant ; ai = index des étapes prises en charge par l'IA. Tous chiffres illustratifs. */
 const B = [
  {id:"ddsis", kind:"type", origin:"", g:"Direction", k:"Directeur (DDSIS)", ic:"star", c:"var(--red)", p:"Col. Antoine Morel", n:[1,1,1], f:24, t:[180,30],
@@ -150,7 +150,7 @@ if ($("orgchart")) {
     });
     const total = B.filter(b => seen.has(b.id)).reduce((s, b) => s + hours(b), 0);
     countTo(total);
-    $("explored").textContent = `${seen.size} / ${B.length} bureaux`;
+    $("explored").textContent = `${seen.size} / ${B.length} groupements`;
     $("progbar").style.width = (seen.size / B.length * 100) + "%";
     if (seen.size === B.length) {
       const all = B.reduce((s, b) => s + hours(b), 0);
@@ -227,7 +227,7 @@ if ($("orgchart")) {
   $("d-next").onclick = () => { const nx = B.findIndex((b, j) => j > cur && !seen.has(b.id)); open(nx >= 0 ? nx : (cur + 1) % B.length); };
   $("d-prev").onclick = () => open((cur - 1 + B.length) % B.length);
   refreshChart();
-  const hb = location.hash.match(/^#bureau-([\w-]+)$/);
+  const hb = location.hash.match(/^#groupement-([\w-]+)$/);
   if (hb) { const i = B.findIndex(b => b.id === hb[1]); if (i >= 0) open(i); }
 }
 
@@ -248,9 +248,9 @@ if ($("news")) {
     {d:"29 août 2026", id:"cta", t:"CTA-CODIS : la synthèse de garde prête au changement d'équipe", s:"Les faits marquants de la nuit, remis à la direction."},
     {d:"8 août 2026", id:"prev", t:"Prévention : une veille réglementaire chaque vendredi", s:"Les textes utiles au SDIS, résumés et classés par impact."}
   ];
-  $("news").innerHTML = NEWS.map((n, i) => `<button class="nitem" type="button" id="news-${i}" data-id="${n.id}"><time>${n.d}</time><b>${n.t}</b><small>${n.s}</small><span class="more">Voir le bureau →</span></button>`).join("");
+  $("news").innerHTML = NEWS.map((n, i) => `<button class="nitem" type="button" id="news-${i}" data-id="${n.id}"><time>${n.d}</time><b>${n.t}</b><small>${n.s}</small><span class="more">Voir le groupement →</span></button>`).join("");
   $("news").querySelectorAll(".nitem").forEach(el => el.onclick = () => {
-    location.href = "/organigramme#bureau-" + el.dataset.id;
+    location.href = "/organigramme#groupement-" + el.dataset.id;
   });
 }
 
@@ -368,9 +368,9 @@ if ($("pgrid")) {
   $("pgrid").innerHTML = P.map((p, i) => `<button class="p" type="button" id="p-${i}" aria-expanded="false"><span class="dot" style="background:${p[1]}"></span><h3>${p[0]}</h3><p>${p[2]}</p></button>`).join("");
   $("pgrid").querySelectorAll(".p").forEach(b => b.onclick = () => b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") !== "true"));
   const J = [
-   ["Démo","<b>45 min en visio.</b> Le SDIS 00 en fonctionnement, sur les bureaux qui vous intéressent."],
+   ["Démo","<b>45 min en visio.</b> Le SDIS 00 en fonctionnement, sur les groupements qui vous intéressent."],
    ["Test","<b>Un groupe pilote, vos documents.</b> On mesure le temps gagné chez vous."],
-   ["Installation","<b>Accès, assistants par bureau, formation</b> des premiers utilisateurs."],
+   ["Installation","<b>Accès, assistants par groupement, formation</b> des premiers utilisateurs."],
    ["Suivi","<b>Point régulier</b> sur les usages et les coûts, nouveaux assistants au fil de l'eau."]
   ];
   $("journey").innerHTML = J.map((j, i) => `<button class="jstep" type="button" id="j-${i}"><span class="n">0${i+1}</span><b>${j[0]}</b></button>`).join("");
