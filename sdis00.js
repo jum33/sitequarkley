@@ -52,7 +52,7 @@ const B = [
   s:["Recenser les données traitées","Qualifier la finalité","Évaluer le risque","Rédiger la fiche registre","Valider avec le service"], ai:[0,2,3],
   q:"Prépare la fiche registre du nouvel assistant RH.", a:"Fiche générée : finalité, données, durée de conservation, niveau de risque au sens du règlement européen sur l'IA.", src:"Trame registre RGPD",
   gd:"La qualification juridique reste celle du DPO.",
-  acc:[["RGPD et règlement IA","Obligations concrètes","2 h"],["Kit conformité","Registre, charte","livrable"],["Attestations","Formation des agents (art. 4)","incluses"]]},
+  acc:[["RGPD et règlement IA","Obligations concrètes","2 h"],["Attestations","Formation des agents (art. 4)","incluses"]]},
  {id:"rh", kind:"type", origin:"", g:"Pôle ressources", k:"Ressources humaines", ic:"users", c:"var(--amber)", p:"Cne Sophie Durand", n:[40,22,10], f:200, t:[20,5],
   task:"Répondre à une question statutaire d'agent",
   s:["Lire la demande","Chercher la note de service","Vérifier le texte en vigueur","Rédiger la réponse","Archiver"], ai:[1,2,3,4],
@@ -357,7 +357,6 @@ syncSel();
 /* ---------- espace direction ---------- */
 if ($("pgrid")) {
   $("di-1").innerHTML = svg("play", "var(--red)");
-  $("di-2").innerHTML = svg("doc", "var(--blue)");
   $("di-3").innerHTML = svg("route", "var(--amber)");
   const P = [
    ["Sécurisé","var(--red)","Accès par agent et par service. Chaque assistant ne voit que son périmètre."],
@@ -377,14 +376,6 @@ if ($("pgrid")) {
   const jb = [...$("journey").children];
   const jsel = i => { jb.forEach((b, k) => b.setAttribute("aria-pressed", k === i)); $("jdetail").innerHTML = J[i][1]; };
   jb.forEach((b, i) => b.onclick = () => jsel(i)); jsel(0);
-  const D = [
-    ["server","Fiche d'architecture et d'hébergement"],
-    ["doc","Trame de fiche registre pour chaque usage"],
-    ["pen","Projet de charte d'usage de l'IA pour les agents"],
-    ["scale","Cartographie des usages au regard du règlement européen sur l'IA"],
-    ["grad","Attestations de formation des agents (article 4)"]
-  ];
-  $("docs").innerHTML = D.map(d => `<div><span class="ic">${svg(d[0], "var(--blue)")}</span>${d[1]}<span class="r">INCLUS</span></div>`).join("");
 }
 
 /* ---------- contact ---------- */

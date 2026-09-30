@@ -273,7 +273,7 @@ footer .legal p{line-height:1.55}
 .qnext{justify-self:center}
 
 /* DIRECTION */
-.dtiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dtiles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:780px;margin-inline:auto}
 @media (max-width:760px){.dtiles{grid-template-columns:1fr}}
 .docs{display:grid;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:820px;margin:0 auto}
 .docs div{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line);font-size:.92rem}
