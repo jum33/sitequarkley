@@ -22,6 +22,7 @@ Points clés :
 ## Déploiement, sécurité et formation
 
 - [Déploiement: 4 phases, 48h technique, 100% votre SDIS](https://quarkley.com/deployer): Cadrage 5 jours, mise en service 48 h, formation 3 jours, suivi 8 semaines : un portail IA opérationnel pour votre SDIS, hébergé en France, sans installation.
+- [Portail IA pour SDIS : le guide des décideurs et acheteurs](https://quarkley.com/portail-ia-sdis-decideurs): Pour directeurs, élus du CASDIS et acheteurs publics : apports d'un portail IA, critères à exiger dans le cahier des charges, étapes d'achat, coût (forfait par SDIS).
 - [Pour votre DSI et votre RSSI](https://quarkley.com/dsi): Ce que la DSI d'un SDIS vérifie : instance dédiée, hébergement en France, zéro rétention, connecteurs Microsoft 365 et Google, journal d'activité, réversibilité
 - [Se former sans être informaticien](https://quarkley.com/se-former): Comment les agents d'un SDIS apprennent le portail IA : 30 minutes pour tous, une demi-journée pour les référents, un parcours complet pour l'administrateur.
 - [Questions fréquentes](https://quarkley.com/faq): Remplacement des agents, mots de passe, confidentialité, erreurs, coûts, hébergement : les réponses aux questions des pompiers, de la direction et du DPD.
