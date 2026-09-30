@@ -20,27 +20,28 @@
 <link rel="apple-touch-icon" href="favicon-512.png" />
 <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "Courriers aux usagers et aux élus – Cas d'usage SDIS", "description": "Réclamations, demandes non urgentes, courriers aux maires : le portail IA propose des réponses dans le style institutionnel du SDIS, en quelques minutes.", "url": "https://quarkley.com/cas-courriers-usagers", "inLanguage": "fr-FR", "isPartOf": {"@type": "WebSite", "name": "SDIS 00 – portail IA Quarkley", "url": "https://quarkley.com/"}, "publisher": {"@type": "Organization", "name": "Quarkley", "url": "https://quarkley.com/", "logo": "https://quarkley.com/favicon-512.png"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://quarkley.com/"}, {"@type": "ListItem", "position": 2, "name": "Cas d'usage", "item": "https://quarkley.com/cas-usage"}, {"@type": "ListItem", "position": 3, "name": "Courriers aux usagers et aux élus", "item": "https://quarkley.com/cas-courriers-usagers"}]}]}</script>
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/sdis00-chrome.css">
+<script src="/sdis00-chrome.js" defer></script>
 </head>
 <body>
-<header class="site-nav">
-  <div class="nav-row">
-    <a href="/" class="brand">
-      <span class="mark"><img src="favicon-64.png" width="30" height="30" alt="" /></span>
-      Quarkley <span class="accent">SDIS</span>
-    </a>
-    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal" onclick="var n=document.getElementById('menu-principal');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);"><span></span><span></span><span></span></button>
-    <nav class="links" id="menu-principal">
-      <a href="/" class="">Accueil</a>
-      <a href="/le-portail-ia" class="">C'est quoi un portail ?</a>
-      <a href="/operationnel" class="">Opérationnel</a>
-      <a href="/prevention" class="">Prévention</a>
-      <a href="/rh-admin" class="">RH & Admin</a>
-      <a href="/terrain" class="">Sur le terrain</a>
-      <a href="/formulaires" class="">Formulaires</a>
-      <a href="/deployer" class="">Déploiement</a>
-      <a href="/contact" class="mobile-only">Réserver une démonstration</a>
+<div class="q-strip">SDIS DE DÉMONSTRATION · FICTIF<span class="q-long"> · PROPULSÉ PAR QUARKLEY</span></div>
+<header class="q-top">
+  <div class="q-wrap">
+    <a class="q-brand" href="/"><img src="/logo-white.webp" alt="" width="322" height="292"><span><b>SDIS 00</b><small>Le SDIS à l'ère de l'IA</small></span></a>
+    <nav class="q-nav" id="q-nav" aria-label="Navigation principale">
+      <a href="/">Accueil</a>
+      <a href="/organigramme">Le SDIS 00</a>
+      <a href="/le-portail-ia">Le portail IA</a>
+      <a href="/bons-gestes">Bons gestes IA</a>
+      <span class="q-sep" aria-hidden="true"></span>
+      <a href="/ecole-ia" class="q-offer">École IA</a>
+      <a href="/espace-direction" class="q-offer">Espace direction</a>
     </nav>
-    <a href="/contact" class="btn btn-feu">Réserver une démonstration</a>
+    <div class="q-right">
+      <a href="/contact" class="q-cta" id="nav-contact">Contact <span class="q-badge" id="nav-n" hidden></span></a>
+      <button class="q-menu" id="q-menu" type="button" aria-expanded="false" aria-controls="q-nav">Menu</button>
+    </div>
   </div>
 </header>
 
@@ -91,44 +92,43 @@
 </section>
 
 </main>
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Le portail</h4>
-                <ul>
-                    <li><a href="/le-portail-ia">C'est quoi un portail ?</a></li>
-                    <li><a href="/operationnel">Opérationnel</a></li>
-                    <li><a href="/prevention">Prévention</a></li>
-                    <li><a href="/rh-admin">RH & Administratif</a></li>
-                    <li><a href="/terrain">Sur le terrain</a></li>
-                    <li><a href="/formulaires">Un formulaire, un résultat</a></li>
-                    <li><a href="/deployer">Déploiement</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Pour aller plus loin</h4>
-                <ul>
-                    <li><a href="/se-former">Se former sans être informaticien</a></li>
-                    <li><a href="/faq">Questions fréquentes</a></li>
-                    <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
-                    <li><a href="/ressources">Ressources : articles</a></li>
-                    <li><a href="/cas-usage">Tous les cas d'usage</a></li>
-                    <li><a href="/dsi">Pour votre DSI</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Informations</h4>
-                <ul>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/mentions-legales">Mentions légales et confidentialité</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Quarkley</h4>
-                <p>L'IA souveraine au service des SDIS. SDIS 00 est le démonstrateur public du portail.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="q-foot">
+  <div class="q-wrap">
+    <div class="q-cols">
+      <div><h4>Le SDIS 00</h4><ul>
+        <li><a href="/organigramme">L'organigramme IA</a></li>
+        <li><a href="/bons-gestes">Les bons gestes de l'IA</a></li>
+        <li><a href="/ecole-ia">École IA</a></li>
+        <li><a href="/espace-direction">Espace direction</a></li>
+      </ul></div>
+      <div><h4>Le portail</h4><ul>
+        <li><a href="/le-portail-ia">C'est quoi un portail ?</a></li>
+        <li><a href="/operationnel">Opérationnel</a></li>
+        <li><a href="/prevention">Prévention</a></li>
+        <li><a href="/rh-admin">RH &amp; Administratif</a></li>
+        <li><a href="/terrain">Sur le terrain</a></li>
+        <li><a href="/formulaires">Un formulaire, un résultat</a></li>
+        <li><a href="/deployer">Déploiement</a></li>
+      </ul></div>
+      <div><h4>Pour aller plus loin</h4><ul>
+        <li><a href="/se-former">Se former sans être informaticien</a></li>
+        <li><a href="/faq">Questions fréquentes</a></li>
+        <li><a href="/lexique">Lexique de l'IA pour sapeurs-pompiers</a></li>
+        <li><a href="/ressources">Ressources : articles</a></li>
+        <li><a href="/cas-usage">Tous les cas d'usage</a></li>
+        <li><a href="/dsi">Pour votre DSI</a></li>
+      </ul></div>
+      <div><h4>Informations</h4><ul>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/mentions-legales">Mentions légales et confidentialité</a></li>
+      </ul></div>
+    </div>
+    <p class="q-about"><b>SDIS 00</b> · L'IA souveraine au service des SDIS. Démonstrateur public du portail <b>Quarkley</b>.</p>
+    <p class="q-disc">SDIS 00 est un SDIS fictif de démonstration, sans lien avec un département ou un service public existant. Personnages fictifs, chiffres donnés à titre d'exemple, cas d'usage inspirés de SDIS réels et anonymisés. Portail, formation et accompagnement : Quarkley.</p>
+    <p class="q-legal">Quarkley · SAS au capital de 5 000 € · RCS Bayonne 939 031 993 · 45 avenue du Président J.F. Kennedy, 64200 Biarritz · Directeur de la publication : Jean-Marc Urrutibehety</p>
+    <p class="q-legal">© 2026 Quarkley. Tous droits réservés.</p>
+  </div>
+</footer>
 
 </body>
 </html>
