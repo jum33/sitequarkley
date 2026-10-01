@@ -72,9 +72,178 @@
           <div><small id="explored">0 / 13 groupements</small><div class="prog"><i id="progbar"></i></div></div>
         </div>
       </div>
-      <div class="org" id="orgchart"></div>
+      <div class="org" id="orgchart"><div class="lvl1"><button class="box" type="button" id="box-ddsis" data-i="0">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"></path></svg></span>
+      <span><b>Directeur (DDSIS)</b><span class="meta"><small class="staff">1 agent</small></span></span>
+      <span class="gain"></span></button></div><div class="stem"></div>
+     <div class="lvl2"><button class="box" type="button" id="box-dda" data-i="1">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg></span>
+      <span><b>Directeur adjoint (DDA)</b><span class="meta"><small class="staff">1 agent</small></span></span>
+      <span class="gain"></span></button></div><div class="stem"></div>
+     <div class="group direction"><p class="kicker">Services de direction</p><button class="box" type="button" id="box-secr" data-i="2">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span>
+      <span><b>Secrétariat de direction</b><span class="meta"><small class="staff">4 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-com" data-i="3">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h3l7 4V6L7 10z"></path><path d="M18 9a4 4 0 010 6"></path></svg></span>
+      <span><b>Communication</b><span class="meta"><small class="staff">3 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-jur" data-i="4">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 8h14"></path><path d="M5 8l-2.5 6a3 3 0 005 0zM19 8l-2.5 6a3 3 0 005 0z"></path></svg></span>
+      <span><b>Juridique &amp; DPO</b><span class="meta"><small class="staff">2 agents</small></span></span>
+      <span class="gain"></span></button></div>
+     <div class="stem"></div>
+     <div class="poles">
+       <div class="group"><p class="kicker">Pôle ressources</p><button class="box" type="button" id="box-rh" data-i="5">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><circle cx="17" cy="9" r="2.4"></circle><path d="M16 14.6c2.8.2 5 2 5 5"></path></svg></span>
+      <span><b>Ressources humaines</b><span class="meta"><small class="staff">22 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-fin" data-i="6">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6.5A6.5 6.5 0 007 12a6.5 6.5 0 0010 5.5"></path><path d="M4 10.5h9M4 13.5h9"></path></svg></span>
+      <span><b>Finances &amp; commande publique</b><span class="meta"><small class="staff">14 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-si" data-i="7">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="7" rx="2"></rect><rect x="4" y="13" width="16" height="7" rx="2"></rect><path d="M8 7.5h.01M8 16.5h.01"></path></svg></span>
+      <span><b>Systèmes d'information</b><span class="meta"><small class="staff">15 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-log" data-i="8">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"></path><circle cx="7" cy="17.5" r="1.8"></circle><circle cx="17" cy="17.5" r="1.8"></circle></svg></span>
+      <span><b>Logistique &amp; technique</b><span class="meta"><small class="staff">25 agents</small></span></span>
+      <span class="gain"></span></button></div>
+       <div class="group"><p class="kicker">Pôle opérations</p><button class="box" type="button" id="box-prev" data-i="9">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 01-10 0c0-2.5 1.5-3.5 2-5 1 1 1.5 2 1.5 3 1-2 1.5-5 1.5-8z"></path></svg></span>
+      <span><b>Prévention</b><span class="meta"><small class="staff">18 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-prevision" data-i="10">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></span>
+      <span><b>Prévision</b><span class="meta"><small class="staff">8 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-cta" data-i="11">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0116 0v2"></path><rect x="3" y="13" width="4" height="6" rx="1.5"></rect><rect x="17" y="13" width="4" height="6" rx="1.5"></rect><path d="M19 19c0 1.5-2 2-5 2"></path></svg></span>
+      <span><b>CTA-CODIS</b><span class="meta"><small class="staff">35 agents</small></span></span>
+      <span class="gain"></span></button><button class="box" type="button" id="box-form" data-i="12">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c3 2 9 2 12 0v-5"></path></svg></span>
+      <span><b>Formation</b><span class="meta"><small class="staff">12 agents</small></span></span>
+      <span class="gain"></span></button></div>
+     </div><!--/orgchart--></div>
       <p class="hint">● Les points orange marquent les groupements pas encore explorés. Chiffres donnés à titre d'exemple.</p>
       <div id="donebox"></div>
+    </div>
+  </section>
+  <section style="padding-top:0" id="groupements">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Groupement par groupement</p><h2>Les 13 groupements en détail</h2></div>
+      <p class="center-note" style="margin:-8px 0 20px">Pour chaque groupement : la tâche, ce que l'IA prend en charge, un exemple et le garde-fou. Heures rendues pour un SDIS de catégorie B, chiffres donnés à titre d'exemple.</p>
+      <div class="gdets" id="seo-groupements"><details class="gdet" id="g-ddsis"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"></path></svg></span><span><b>Directeur (DDSIS)</b><small>Direction · Préparer une note au président du conseil d'administration</small></span><span class="gain">+60 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> préparer une note au président du conseil d'administration. <b>Avant :</b> 3 h par tâche. <b>Avec l'IA :</b> 30 min.</p>
+<ol><li>Demander les chiffres aux groupements <span class="who-tag">IA</span></li><li>Relancer ceux qui n'ont pas répondu <span class="who-tag">IA</span></li><li>Compiler les tableaux <span class="who-tag">IA</span></li><li>Rédiger la note <span class="who-tag">IA</span></li><li>Relire et arbitrer <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Prépare ma note au président sur l'activité du trimestre. »</p>
+<div class="ans"><b>Réponse du portail :</b> Note prête en 1 page :<ul><li>Activité opérationnelle +4 %</li><li>Budget tenu</li><li>2 points d'arbitrage</li></ul> <small>Source : Tableaux de bord des groupements · T3</small></div>
+<p><b>Garde-fou :</b> La note est relue et signée par le directeur.</p>
+<p><b>Accompagnement :</b> Piloter l'IA (Atelier direction, ½ jour) · Charte IA du SDIS (Rédigée avec vous, livrable) · Tableau de bord (Usages et coûts, mensuel).</p>
+</div></details>
+<details class="gdet" id="g-dda"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg></span><span><b>Directeur adjoint (DDA)</b><small>Direction · Préparer le comité de direction</small></span><span class="gain">+168 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> préparer le comité de direction. <b>Avant :</b> 4 h par tâche. <b>Avec l'IA :</b> 30 min.</p>
+<ol><li>Lire les rapports des groupements <span class="who-tag">IA</span></li><li>Repérer les sujets à arbitrer <span class="who-tag">IA</span></li><li>Construire l'ordre du jour <span class="who-tag">AGENT</span></li><li>Rédiger la synthèse <span class="who-tag">IA</span></li><li>Diffuser le relevé de décisions <span class="who-tag">IA</span></li></ol>
+<p><b>Exemple de demande :</b> « Synthétise les remontées des groupements pour le CODIR de lundi. »</p>
+<div class="ans"><b>Réponse du portail :</b> 3 enjeux à arbitrer :<ul><li>Effectifs de garde été</li><li>Disponibilité du parc VSAV</li><li>Retards de formation</li></ul> <small>Source : 5 rapports de groupement</small></div>
+<p><b>Garde-fou :</b> L'ordre du jour reste fixé par le DDA.</p>
+<p><b>Accompagnement :</b> Piloter l'IA (Atelier direction, ½ jour) · Assistant CODIR (Construit avec vous, 1 séance) · Suivi (Point mensuel, 30 min).</p>
+</div></details>
+<details class="gdet" id="g-secr"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"></path><path d="M13.5 6.5l4 4"></path></svg></span><span><b>Secrétariat de direction</b><small>Services de direction · Rédiger une délibération après séance</small></span><span class="gain">+560 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> rédiger une délibération après séance. <b>Avant :</b> 4 h par tâche. <b>Avec l'IA :</b> 30 min. <b>Cas réel</b> (SDIS de catégorie B · Nouvelle-Aquitaine).</p>
+<ol><li>Réécouter l'enregistrement <span class="who-tag">IA</span></li><li>Prendre des notes <span class="who-tag">IA</span></li><li>Retrouver les votes <span class="who-tag">IA</span></li><li>Rédiger au format <span class="who-tag">IA</span></li><li>Faire relire <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Transforme l'enregistrement du conseil en projet de délibération. »</p>
+<div class="ans"><b>Réponse du portail :</b> Projet n° 2026-14 prêt :<ul><li>4 décisions extraites</li><li>Votes reportés</li><li>Mise en page du service</li></ul> <small>Source : Audio de séance · modèle de délibération</small></div>
+<p><b>Garde-fou :</b> Relecture par le secrétariat de l'assemblée avant signature.</p>
+<p><b>Accompagnement :</b> Rédiger vite et juste (Comptes rendus, courriers, 2 h) · Assistant délibérations (Sur vos modèles, 1 séance) · Suivi (Ajustements, à la demande).</p>
+</div></details>
+<details class="gdet" id="g-com"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h3l7 4V6L7 10z"></path><path d="M18 9a4 4 0 010 6"></path></svg></span><span><b>Communication</b><small>Services de direction · Publier après une intervention marquante</small></span><span class="gain">+225 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> publier après une intervention marquante. <b>Avant :</b> 1 h par tâche. <b>Avec l'IA :</b> 15 min.</p>
+<ol><li>Récupérer les éléments auprès du CODIS <span class="who-tag">IA</span></li><li>Vérifier ce qui est publiable <span class="who-tag">AGENT</span></li><li>Rédiger le post <span class="who-tag">IA</span></li><li>Décliner pour chaque réseau <span class="who-tag">IA</span></li><li>Faire valider <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Rédige un post LinkedIn et un post Facebook sur le feu d'entrepôt de cette nuit. »</p>
+<div class="ans"><b>Réponse du portail :</b> 2 versions prêtes, sans donnée personnelle, avec rappel des moyens engagés et remerciements. <small>Source : Synthèse CODIS · charte éditoriale</small></div>
+<p><b>Garde-fou :</b> Aucune donnée de victime. Validation par la direction.</p>
+<p><b>Accompagnement :</b> IA et communication publique (Ce qu'on publie, ce qu'on ne publie pas, 2 h) · Assistant éditorial (À votre charte, 1 séance) · Acculturation (Équipe com, 1 h).</p>
+</div></details>
+<details class="gdet" id="g-jur"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 8h14"></path><path d="M5 8l-2.5 6a3 3 0 005 0zM19 8l-2.5 6a3 3 0 005 0z"></path></svg></span><span><b>Juridique &amp; DPO</b><small>Services de direction · Documenter un nouveau traitement de données</small></span><span class="gain">+135 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> documenter un nouveau traitement de données. <b>Avant :</b> 3 h par tâche. <b>Avec l'IA :</b> 45 min.</p>
+<ol><li>Recenser les données traitées <span class="who-tag">IA</span></li><li>Qualifier la finalité <span class="who-tag">AGENT</span></li><li>Évaluer le risque <span class="who-tag">IA</span></li><li>Rédiger la fiche registre <span class="who-tag">IA</span></li><li>Valider avec le service <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Prépare la fiche registre du nouvel assistant RH. »</p>
+<div class="ans"><b>Réponse du portail :</b> Fiche générée : finalité, données, durée de conservation, niveau de risque au sens du règlement européen sur l'IA. <small>Source : Trame registre RGPD</small></div>
+<p><b>Garde-fou :</b> La qualification juridique reste celle du DPO.</p>
+<p><b>Accompagnement :</b> RGPD et règlement IA (Obligations concrètes, 2 h) · Attestations (Formation des agents (art. 4), incluses).</p>
+</div></details>
+<details class="gdet" id="g-rh"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><circle cx="17" cy="9" r="2.4"></circle><path d="M16 14.6c2.8.2 5 2 5 5"></path></svg></span><span><b>Ressources humaines</b><small>Pôle ressources · Répondre à une question statutaire d'agent</small></span><span class="gain">+1 100 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> répondre à une question statutaire d'agent. <b>Avant :</b> 20 min par tâche. <b>Avec l'IA :</b> 5 min.</p>
+<ol><li>Lire la demande <span class="who-tag">AGENT</span></li><li>Chercher la note de service <span class="who-tag">IA</span></li><li>Vérifier le texte en vigueur <span class="who-tag">IA</span></li><li>Rédiger la réponse <span class="who-tag">IA</span></li><li>Archiver <span class="who-tag">IA</span></li></ol>
+<p><b>Exemple de demande :</b> « Un SPV peut-il cumuler sa disponibilité avec un temps partiel ? »</p>
+<div class="ans"><b>Réponse du portail :</b> Oui, sous conditions : <ul><li>Accord de l'employeur</li><li>Convention de disponibilité</li></ul>Réponse type prête à envoyer. <small>Source : Note de service RH-2025-11, § 3</small></div>
+<p><b>Garde-fou :</b> Aucune donnée individuelle d'agent dans l'assistant.</p>
+<p><b>Accompagnement :</b> IA et données RH (Ce qu'on confie, ce qu'on garde, 2 h) · Assistant échéances (Aptitudes, FMPA, permis, 1 séance) · Acculturation (Toute l'équipe RH, 1 h).</p>
+</div></details>
+<details class="gdet" id="g-fin"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6.5A6.5 6.5 0 007 12a6.5 6.5 0 0010 5.5"></path><path d="M4 10.5h9M4 13.5h9"></path></svg></span><span><b>Finances &amp; commande publique</b><small>Pôle ressources · Rédiger un CCTP</small></span><span class="gain">+1 008 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> rédiger un CCTP. <b>Avant :</b> 8 h par tâche. <b>Avec l'IA :</b> 2 h.</p>
+<ol><li>Retrouver l'ancien marché <span class="who-tag">IA</span></li><li>Recueillir le besoin <span class="who-tag">AGENT</span></li><li>Adapter chaque article <span class="who-tag">IA</span></li><li>Vérifier la cohérence <span class="who-tag">IA</span></li><li>Faire relire <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Rédige un premier jet de CCTP pour le renouvellement des tenues. »</p>
+<div class="ans"><b>Réponse du portail :</b> CCTP en 9 articles, basé sur le marché 2022. 3 points à arbitrer signalés. <small>Source : Modèles internes · marché 2022</small></div>
+<p><b>Garde-fou :</b> Relecture juridique inchangée, notation des offres humaine.</p>
+<p><b>Accompagnement :</b> Rédiger avec l'IA (Pièces de marché, 2 h) · Assistant marchés (Sur vos modèles, 1 séance) · Suivi (Ajustements, à la demande).</p>
+</div></details>
+<details class="gdet" id="g-si"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="7" rx="2"></rect><rect x="4" y="13" width="16" height="7" rx="2"></rect><path d="M8 7.5h.01M8 16.5h.01"></path></svg></span><span><b>Systèmes d'information</b><small>Pôle ressources · Traiter une demande de support</small></span><span class="gain">+525 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> traiter une demande de support. <b>Avant :</b> 15 min par tâche. <b>Avec l'IA :</b> 8 min.</p>
+<ol><li>Lire le ticket <span class="who-tag">AGENT</span></li><li>Chercher la procédure <span class="who-tag">IA</span></li><li>Rédiger la réponse <span class="who-tag">IA</span></li><li>Clore le ticket <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Comment réinitialiser l'accès d'un agent à la messagerie ? »</p>
+<div class="ans"><b>Réponse du portail :</b> Procédure en 4 étapes, avec lien vers la fiche interne. <small>Source : Base de procédures SI</small></div>
+<p><b>Garde-fou :</b> Le portail tourne sur l'hébergement que vous choisissez.</p>
+<p><b>Accompagnement :</b> Dossier technique (Architecture, sécurité, livrable) · Installation (Accès, droits, modèles, accompagnée) · Suivi technique (Mises à jour, continu).</p>
+</div></details>
+<details class="gdet" id="g-log"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"></path><circle cx="7" cy="17.5" r="1.8"></circle><circle cx="17" cy="17.5" r="1.8"></circle></svg></span><span><b>Logistique &amp; technique</b><small>Pôle ressources · Traiter une demande de matériel d'un centre</small></span><span class="gain">+750 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> traiter une demande de matériel d'un centre. <b>Avant :</b> 20 min par tâche. <b>Avec l'IA :</b> 8 min.</p>
+<ol><li>Lire la demande <span class="who-tag">AGENT</span></li><li>Vérifier le stock <span class="who-tag">AGENT</span></li><li>Vérifier le règlement d'habillement <span class="who-tag">IA</span></li><li>Répondre au centre <span class="who-tag">IA</span></li></ol>
+<p><b>Exemple de demande :</b> « Le CIS Nord demande 4 vestes textiles : ont-ils droit au renouvellement ? »</p>
+<div class="ans"><b>Réponse du portail :</b> 2 vestes renouvelables (dotation de plus de 5 ans), 2 à justifier. Réponse prête. <small>Source : Règlement d'habillement · stock</small></div>
+<p><b>Garde-fou :</b> La décision d'attribution reste au magasin.</p>
+<p><b>Accompagnement :</b> Acculturation IA (Équipes techniques, 1 h) · Assistant dotations (Sur vos règles, 1 séance) · Suivi (Ajustements, à la demande).</p>
+</div></details>
+<details class="gdet" id="g-prev"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 01-10 0c0-2.5 1.5-3.5 2-5 1 1 1.5 2 1.5 3 1-2 1.5-5 1.5-8z"></path></svg></span><span><b>Prévention</b><small>Pôle opérations · Préparer un avis sur dossier ERP</small></span><span class="gain">+1 440 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> préparer un avis sur dossier ERP. <b>Avant :</b> 2 h par tâche. <b>Avec l'IA :</b> 1 h.</p>
+<ol><li>Lire les pièces du dossier <span class="who-tag">IA</span></li><li>Identifier le type et la catégorie <span class="who-tag">AGENT</span></li><li>Rechercher les articles applicables <span class="who-tag">IA</span></li><li>Rédiger l'avis <span class="who-tag">IA</span></li><li>Signer <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Quels articles du règlement s'appliquent à ce dossier de salle polyvalente ? »</p>
+<div class="ans"><b>Réponse du portail :</b> Type L, 3e catégorie. <ul><li>12 articles applicables</li><li>2 points de vigilance : dégagements, désenfumage</li></ul> <small>Source : Dossier PC-2026-081 · règlement de sécurité</small></div>
+<p><b>Garde-fou :</b> L'avis reste celui du préventionniste, qui le relit et le signe.</p>
+<p><b>Accompagnement :</b> Rédiger avec l'IA (Sans lui déléguer l'avis, 2 h) · Veille réglementaire (Automatisée, 1 séance) · Acculturation (Préventionnistes, 1 h).</p>
+</div></details>
+<details class="gdet" id="g-prevision"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg></span><span><b>Prévision</b><small>Pôle opérations · Mettre à jour un plan d'établissement répertorié</small></span><span class="gain">+640 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> mettre à jour un plan d'établissement répertorié. <b>Avant :</b> 4 h par tâche. <b>Avec l'IA :</b> 2 h.</p>
+<ol><li>Collecter les plans et documents <span class="who-tag">AGENT</span></li><li>Extraire les informations utiles <span class="who-tag">IA</span></li><li>Rédiger la fiche <span class="who-tag">IA</span></li><li>Vérifier sur place <span class="who-tag">AGENT</span></li><li>Diffuser aux centres <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Extrais les informations opérationnelles de ce dossier d'usine. »</p>
+<div class="ans"><b>Réponse du portail :</b> Fiche pré-remplie : accès, points d'eau, coupures, risques particuliers. <small>Source : Dossier exploitant · modèle de fiche</small></div>
+<p><b>Garde-fou :</b> La visite sur place reste indispensable.</p>
+<p><b>Accompagnement :</b> Acculturation IA (Prévisionnistes, 1 h) · Assistant fiches (Sur votre modèle, 1 séance) · Suivi (Ajustements, à la demande).</p>
+</div></details>
+<details class="gdet" id="g-cta"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0116 0v2"></path><rect x="3" y="13" width="4" height="6" rx="1.5"></rect><rect x="17" y="13" width="4" height="6" rx="1.5"></rect><path d="M19 19c0 1.5-2 2-5 2"></path></svg></span><span><b>CTA-CODIS</b><small>Pôle opérations · Rédiger la synthèse de fin de garde</small></span><span class="gain">+1 021 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> rédiger la synthèse de fin de garde. <b>Avant :</b> 45 min par tâche. <b>Avec l'IA :</b> 10 min.</p>
+<ol><li>Relire la main courante <span class="who-tag">IA</span></li><li>Sélectionner les faits marquants <span class="who-tag">IA</span></li><li>Rédiger la synthèse <span class="who-tag">IA</span></li><li>Transmettre à la direction <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Fais la synthèse de la garde de cette nuit pour la direction. »</p>
+<div class="ans"><b>Réponse du portail :</b> <ul><li>47 interventions</li><li>1 feu d'entrepôt, 3 FPT engagés</li><li>Aucun blessé parmi les personnels</li></ul> <small>Source : Main courante · garde du 30/09</small></div>
+<p><b>Garde-fou :</b> Aucune IA dans le traitement de l'alerte.</p>
+<p><b>Accompagnement :</b> Acculturation IA (Opérateurs et chefs de salle, 1 h) · Assistant synthèse (Sur votre main courante, 1 séance) · Suivi (Ajustements, à la demande).</p>
+</div></details>
+<details class="gdet" id="g-form"><summary><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c3 2 9 2 12 0v-5"></path></svg></span><span><b>Formation</b><small>Pôle opérations · Construire une séquence de formation</small></span><span class="gain">+1 260 h/an</span></summary>
+<div class="gbody">
+<p><b>Tâche :</b> construire une séquence de formation. <b>Avant :</b> 5 h par tâche. <b>Avec l'IA :</b> 1 h 30.</p>
+<ol><li>Rassembler les référentiels <span class="who-tag">AGENT</span></li><li>Écrire le déroulé <span class="who-tag">IA</span></li><li>Créer les supports <span class="who-tag">IA</span></li><li>Rédiger le QCM <span class="who-tag">IA</span></li><li>Préparer les mises en situation <span class="who-tag">AGENT</span></li></ol>
+<p><b>Exemple de demande :</b> « Crée un QCM de 20 questions sur le module secours routier. »</p>
+<div class="ans"><b>Réponse du portail :</b> QCM prêt, corrigé inclus, niveaux de difficulté répartis. <small>Source : Référentiel de formation · module SR</small></div>
+<p><b>Garde-fou :</b> Le contenu est validé par le formateur.</p>
+<p><b>Accompagnement :</b> Former avec l'IA (Concevoir plus vite, ½ jour) · Assistant pédagogique (Sur vos référentiels, 1 séance) · Acculturation (Tous les formateurs, 1 h).</p>
+</div></details><!--/seo-groupements--></div>
     </div>
   </section>
 </div>
