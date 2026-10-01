@@ -1,177 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="Un portail IA de SDIS : les agents se connectent à un portail hébergé en France qui contient les assistants, les documents du SDIS, les formulaires, les règles d'accès et le journal ; le portail interroge des modèles d'IA interchangeables en n'envoyant que des extraits, jamais conservés.">
+<svg xmlns="http://www.w3.org/2000/svg" id="pd" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-labelledby="pd-t">
+  <title id="pd-t">Le portail IA du SDIS : les agents posent une question, confient un document, remplissent un formulaire ou dictent, depuis l'ordinateur ou le téléphone. Le portail, hébergé en France, contient les assistants, les documents du SDIS, les formulaires et les comptes rendus ; le SDIS garde la main sur les droits d'accès et le journal d'activité, et les documents complets et données personnelles restent dans le portail. Seuls les extraits utiles partent vers un modèle d'IA interchangeable, européen par défaut, dont la réponse n'est pas conservée. L'IA prépare, l'agent décide.</title>
   <defs>
-    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/>
-    </marker>
-    <marker id="flr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#E60000"/>
-    </marker>
+    <marker id="pd-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#121417"/></marker>
+    <marker id="pd-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#D7141E"/></marker>
   </defs>
   <style>
-    .t { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #1a1a1a; }
-    .h { font-weight: 700; }
-    .m { fill: #555; }
-    .r { fill: #E60000; }
-    .w { fill: #fff; }
+    @font-face{font-family:"Geist";src:url("/fonts/Geist-Variable.woff2") format("woff2");font-weight:100 900}
+    @font-face{font-family:"Geist Mono";src:url("/fonts/GeistMono-Variable.woff2") format("woff2");font-weight:100 900}
+    #pd text{font-family:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;fill:#121417}
+    #pd .pd-k{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;fill:#6B7078}
+    #pd .pd-h{font-weight:700;font-size:20px;letter-spacing:-.02em}
+    #pd .pd-b{font-weight:600;font-size:14px}
+    #pd .pd-s{font-size:12.5px;fill:#6B7078}
+    #pd .pd-red{fill:#D7141E}
+    #pd .pd-w{fill:#fff}
+    #pd .pd-card{fill:#fff;stroke:#E1E4E8}
+    #pd .pd-ic{fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
   </style>
+  <rect width="1200" height="660" fill="#fff"/>
 
-  <rect width="1200" height="760" fill="#ffffff"/>
+  <!-- Infographie « Le portail IA » (page le-portail-ia.html, insérée telle quelle dans la page). -->
+  <!-- zone France -->
+  <rect x="16" y="28" width="808" height="532" rx="28" fill="#F4F5F7"/>
+  <rect x="40" y="16" width="250" height="26" rx="13" fill="#121417"/>
+  <text x="165" y="33" text-anchor="middle" class="pd-k" style="fill:#fff;font-size:10.5px">HÉBERGÉ EN FRANCE</text>
 
-  <!-- Titre -->
-  <text x="600" y="40" class="t h" font-size="26" text-anchor="middle">C'est quoi, un portail IA pour un SDIS ?</text>
-  <text x="600" y="64" class="t m" font-size="14" text-anchor="middle">Un espace interne, hébergé en France, où les agents confient des tâches précises à l'IA — en gardant le contrôle.</text>
-
-  <!-- Zone souveraine (agents + portail) -->
-  <rect x="24" y="92" width="836" height="560" rx="14" fill="#f7f9fb" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="6 5"/>
-  <rect x="40" y="80" width="420" height="24" rx="4" fill="#1a1a1a"/>
-  <text x="250" y="97" class="t w h" font-size="13" text-anchor="middle">HÉBERGÉ EN FRANCE · DROIT FRANÇAIS ET EUROPÉEN</text>
-
-  <!-- ===== ZONE 1 : agents ===== -->
-  <text x="176" y="136" class="t h" font-size="17" text-anchor="middle">1. Les agents du SDIS</text>
-  <text x="176" y="156" class="t m" font-size="12" text-anchor="middle">depuis l'ordinateur ou le téléphone</text>
-
-  <!-- 4 agents -->
-  <g>
-    <rect x="56" y="176" width="240" height="54" rx="8" fill="#fff" stroke="#e0e0e0"/>
-    <circle cx="84" cy="203" r="14" fill="#E60000"/><text x="84" y="208" class="t w h" font-size="13" text-anchor="middle">O</text>
-    <text x="108" y="199" class="t h" font-size="13">Officier</text>
-    <text x="108" y="217" class="t m" font-size="11.5">« Quel départ pour un feu de parking ? »</text>
+  <!-- 1 agents -->
+  <text x="44" y="78" class="pd-k">01 · LES AGENTS</text>
+  <text x="44" y="102" class="pd-h">Depuis l'ordinateur</text>
+  <text x="44" y="126" class="pd-h">ou le téléphone</text>
+  <g transform="translate(44,148)">
+    <rect width="236" height="62" rx="16" class="pd-card"/>
+    <circle cx="31" cy="31" r="17" fill="#F4F5F7"/>
+    <g transform="translate(21,21) scale(.85)" class="pd-ic" stroke="#D7141E"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></g>
+    <text x="58" y="27" class="pd-b">Poser une question</text><text x="58" y="45" class="pd-s">Officier, à @doctrine</text>
   </g>
-  <g>
-    <rect x="56" y="242" width="240" height="54" rx="8" fill="#fff" stroke="#e0e0e0"/>
-    <circle cx="84" cy="269" r="14" fill="#E60000"/><text x="84" y="274" class="t w h" font-size="13" text-anchor="middle">P</text>
-    <text x="108" y="265" class="t h" font-size="13">Préventionniste</text>
-    <text x="108" y="283" class="t m" font-size="11.5">dépose une notice ERP de 80 pages</text>
+  <g transform="translate(44,220)">
+    <rect width="236" height="62" rx="16" class="pd-card"/>
+    <circle cx="31" cy="31" r="17" fill="#F4F5F7"/>
+    <g transform="translate(21,21) scale(.85)" class="pd-ic" stroke="#0B5FC1"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5"/></g>
+    <text x="58" y="27" class="pd-b">Confier un document</text><text x="58" y="45" class="pd-s">Une notice ERP de 80 pages</text>
   </g>
-  <g>
-    <rect x="56" y="308" width="240" height="54" rx="8" fill="#fff" stroke="#e0e0e0"/>
-    <circle cx="84" cy="335" r="14" fill="#E60000"/><text x="84" y="340" class="t w h" font-size="13" text-anchor="middle">RH</text>
-    <text x="108" y="331" class="t h" font-size="13">Gestionnaire RH</text>
-    <text x="108" y="349" class="t m" font-size="11.5">remplit le formulaire « attestation »</text>
+  <g transform="translate(44,292)">
+    <rect width="236" height="62" rx="16" class="pd-card"/>
+    <circle cx="31" cy="31" r="17" fill="#F4F5F7"/>
+    <g transform="translate(21,21) scale(.85)" class="pd-ic" stroke="#E89A12"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h4"/></g>
+    <text x="58" y="27" class="pd-b">Remplir un formulaire</text><text x="58" y="45" class="pd-s">Une attestation, côté RH</text>
   </g>
-  <g>
-    <rect x="56" y="374" width="240" height="54" rx="8" fill="#fff" stroke="#e0e0e0"/>
-    <circle cx="84" cy="401" r="14" fill="#E60000"/><text x="84" y="406" class="t w h" font-size="13" text-anchor="middle">CG</text>
-    <text x="108" y="397" class="t h" font-size="13">Chef de groupe</text>
-    <text x="108" y="415" class="t m" font-size="11.5">dicte un RETEX dans le fourgon</text>
+  <g transform="translate(44,364)">
+    <rect width="236" height="62" rx="16" class="pd-card"/>
+    <circle cx="31" cy="31" r="17" fill="#F4F5F7"/>
+    <g transform="translate(21,21) scale(.85)" class="pd-ic" stroke="#D7141E"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></g>
+    <text x="58" y="27" class="pd-b">Dicter</text><text x="58" y="45" class="pd-s">Un RETEX dans le fourgon</text>
+  </g>
+  <text x="44" y="458" class="pd-s">Connexion avec le compte habituel</text>
+  <text x="44" y="476" class="pd-s">du SDIS ou un code reçu par e-mail.</text>
+
+  <!-- flèches agents -> portail -->
+  <line x1="290" y1="250" x2="336" y2="250" stroke="#121417" stroke-width="1.6" marker-end="url(#pd-a)"/>
+  <line x1="336" y1="350" x2="290" y2="350" stroke="#D7141E" stroke-width="2" marker-end="url(#pd-ar)"/>
+
+  <!-- 2 portail -->
+  <rect x="344" y="56" width="456" height="480" rx="24" fill="#fff" stroke="#121417" stroke-width="1.5"/>
+  <text x="372" y="92" class="pd-k">02 · LE PORTAIL DU SDIS</text>
+  <text x="372" y="118" class="pd-h">Il parle pompier</text>
+  <g transform="translate(368,138)">
+    <rect width="200" height="112" rx="18" fill="#F4F5F7"/>
+    <text x="18" y="30" class="pd-b">Les assistants</text>
+    <text x="18" y="54" class="pd-s pd-red" style="font-family:'Geist Mono',monospace;font-size:12px">@doctrine @prevention</text>
+    <text x="18" y="72" class="pd-s pd-red" style="font-family:'Geist Mono',monospace;font-size:12px">@rh @marches</text>
+    <text x="18" y="96" class="pd-s">Chacun son périmètre.</text>
+  </g>
+  <g transform="translate(580,138)">
+    <rect width="200" height="112" rx="18" fill="#F4F5F7"/>
+    <text x="18" y="30" class="pd-b">Vos documents</text>
+    <text x="18" y="54" class="pd-s">Règlement opérationnel,</text>
+    <text x="18" y="72" class="pd-s">GDO, notices, notes</text>
+    <text x="18" y="96" class="pd-s">Cités comme sources.</text>
+  </g>
+  <g transform="translate(368,262)">
+    <rect width="200" height="112" rx="18" fill="#F4F5F7"/>
+    <text x="18" y="30" class="pd-b">Formulaires</text>
+    <text x="18" y="54" class="pd-s">Trois cases, un résultat.</text>
+    <text x="18" y="72" class="pd-s">Veille chaque lundi 7 h,</text>
+    <text x="18" y="90" class="pd-s">e-mails pré-traités.</text>
+  </g>
+  <g transform="translate(580,262)">
+    <rect width="200" height="112" rx="18" fill="#F4F5F7"/>
+    <text x="18" y="30" class="pd-b">Comptes rendus</text>
+    <text x="18" y="54" class="pd-s">Un enregistrement</text>
+    <text x="18" y="72" class="pd-s">devient un PV ou un</text>
+    <text x="18" y="90" class="pd-s">relevé de décisions.</text>
+  </g>
+  <g transform="translate(368,386)">
+    <rect width="412" height="130" rx="18" fill="#fff" stroke="#E1E4E8"/>
+    <text x="18" y="30" class="pd-b">Le SDIS garde la main</text>
+    <circle cx="24" cy="54" r="3" fill="#0B5FC1"/><text x="36" y="58" class="pd-s">Droits d'accès : un chef de centre voit son centre</text>
+    <circle cx="24" cy="78" r="3" fill="#0B5FC1"/><text x="36" y="82" class="pd-s">Journal d'activité : qui, quoi, quand</text>
+    <circle cx="24" cy="102" r="3" fill="#0B5FC1"/><text x="36" y="106" class="pd-s">Documents complets et données personnelles restent ici</text>
   </g>
 
-  <!-- Connexion -->
-  <rect x="44" y="446" width="264" height="46" rx="8" fill="#fff5f5" stroke="#E60000"/>
-  <text x="176" y="465" class="t h" font-size="11.5" text-anchor="middle">Connexion : compte du SDIS ou code par e-mail</text>
-  <text x="176" y="482" class="t m" font-size="11.5" text-anchor="middle">Aucune installation · aucun mot de passe en plus</text>
+  <!-- frontière -->
+  <line x1="872" y1="40" x2="872" y2="548" stroke="#D7141E" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <line x1="800" y1="220" x2="944" y2="220" stroke="#121417" stroke-width="1.6" marker-end="url(#pd-a)"/>
+  <line x1="944" y1="380" x2="800" y2="380" stroke="#D7141E" stroke-width="2" marker-end="url(#pd-ar)"/>
+  <rect x="812" y="272" width="120" height="56" rx="28" fill="#D7141E"/>
+  <text x="872" y="296" text-anchor="middle" class="pd-w" style="font-weight:600;font-size:12.5px">Seuls les</text>
+  <text x="872" y="313" text-anchor="middle" class="pd-w" style="font-weight:600;font-size:12.5px">extraits utiles</text>
+  <rect x="812" y="192" width="120" height="20" fill="#fff"/><text x="872" y="206" text-anchor="middle" class="pd-s" style="font-size:11.5px">extrait + consigne</text>
+  <rect x="800" y="388" width="144" height="20" fill="#fff"/><text x="872" y="402" text-anchor="middle" class="pd-s" style="font-size:11.5px">réponse non conservée</text>
 
-  <!-- Flèches agents -> portail -->
-  <line x1="296" y1="203" x2="366" y2="203" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#fl)"/>
-  <line x1="296" y1="269" x2="366" y2="269" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#fl)"/>
-  <line x1="296" y1="335" x2="366" y2="335" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#fl)"/>
-  <line x1="296" y1="401" x2="366" y2="401" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#fl)"/>
-  <text x="331" y="195" class="t m" font-size="10.5" text-anchor="middle">question</text>
-  <text x="331" y="261" class="t m" font-size="10.5" text-anchor="middle">document</text>
-  <text x="331" y="327" class="t m" font-size="10.5" text-anchor="middle">formulaire</text>
-  <text x="331" y="393" class="t m" font-size="10.5" text-anchor="middle">voix</text>
+  <!-- 3 modèles -->
+  <text x="952" y="78" class="pd-k">03 · LES MODÈLES D'IA</text>
+  <text x="952" y="102" class="pd-h">Interchangeables</text>
+  <g transform="translate(952,124)">
+    <rect width="232" height="62" rx="16" fill="#fff" stroke="#D7141E" stroke-width="1.5"/>
+    <text x="18" y="27" class="pd-b">Modèle européen</text><text x="18" y="45" class="pd-s">par défaut, zéro rétention</text>
+    <rect x="152" y="12" width="66" height="20" rx="10" fill="#D7141E"/><text x="185" y="26" text-anchor="middle" class="pd-w" style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.08em">ACTIF</text>
+  </g>
+  <g transform="translate(952,196)"><rect width="232" height="62" rx="16" class="pd-card"/><text x="18" y="27" class="pd-b">Modèle américain</text><text x="18" y="45" class="pd-s">si le SDIS l'autorise</text></g>
+  <g transform="translate(952,268)"><rect width="232" height="62" rx="16" class="pd-card"/><text x="18" y="27" class="pd-b">Modèle libre</text><text x="18" y="45" class="pd-s">coût minimal</text></g>
+  <g transform="translate(952,340)"><rect width="232" height="62" rx="16" class="pd-card"/><text x="18" y="27" class="pd-b">Modèle hébergé au SDIS</text><text x="18" y="45" class="pd-s">sur vos serveurs, en option</text></g>
+  <text x="952" y="440" class="pd-b">Changez de modèle en 1 clic.</text>
+  <text x="952" y="460" class="pd-s">Assistants, documents et historique</text>
+  <text x="952" y="478" class="pd-s">restent en place.</text>
 
-  <!-- Retour -->
-  <line x1="366" y1="530" x2="296" y2="530" stroke="#E60000" stroke-width="2" marker-end="url(#flr)"/>
-  <text x="176" y="526" class="t h r" font-size="12" text-anchor="middle">Résultat prêt à relire, avec ses sources</text>
-  <text x="176" y="544" class="t m" font-size="11.5" text-anchor="middle">L'IA prépare, l'agent décide. Rien ne part sans validation.</text>
-
-  <!-- ===== ZONE 2 : portail ===== -->
-  <rect x="370" y="120" width="470" height="512" rx="12" fill="#fff" stroke="#E60000" stroke-width="2.5"/>
-  <rect x="370" y="120" width="470" height="44" rx="12" fill="#E60000"/>
-  <rect x="370" y="150" width="470" height="14" fill="#E60000"/>
-  <text x="605" y="141" class="t w h" font-size="17" text-anchor="middle">2. LE PORTAIL — portail-ia.sdis00.fr</text>
-  <text x="605" y="158" class="t w" font-size="11.5" text-anchor="middle">aux couleurs et à l'écusson du SDIS · il parle pompier (SPV, FMPA, CRSS, GDO…)</text>
-
-  <!-- Bloc assistants -->
-  <rect x="386" y="178" width="218" height="112" rx="8" fill="#fff5f5" stroke="#f0c0c0"/>
-  <text x="398" y="198" class="t h r" font-size="13">Assistants spécialisés</text>
-  <text x="398" y="218" class="t" font-size="12">@doctrine · @prevention</text>
-  <text x="398" y="236" class="t" font-size="12">@rh · @marches</text>
-  <text x="398" y="256" class="t m" font-size="11">Chacun connaît son périmètre</text>
-  <text x="398" y="272" class="t m" font-size="11">et cite ses sources.</text>
-
-  <!-- Bloc documents -->
-  <rect x="616" y="178" width="208" height="112" rx="8" fill="#f0f8ff" stroke="#c8dcf0"/>
-  <text x="628" y="198" class="t h" font-size="13">Les documents du SDIS</text>
-  <text x="628" y="218" class="t" font-size="12">Règlement opérationnel, GDO,</text>
-  <text x="628" y="236" class="t" font-size="12">notices, délibérations, notes</text>
-  <text x="628" y="256" class="t m" font-size="11">Rangés pour être interrogés,</text>
-  <text x="628" y="272" class="t m" font-size="11">un projet par dossier.</text>
-
-  <!-- Bloc formulaires -->
-  <rect x="386" y="302" width="218" height="96" rx="8" fill="#f8f9fa" stroke="#e0e0e0"/>
-  <text x="398" y="322" class="t h" font-size="13">Formulaires &amp; automatisations</text>
-  <text x="398" y="342" class="t" font-size="12">Trois cases, un résultat.</text>
-  <text x="398" y="360" class="t" font-size="12">Veille chaque lundi 7 h,</text>
-  <text x="398" y="378" class="t" font-size="12">e-mails pré-traités.</text>
-
-  <!-- Bloc comptes-rendus -->
-  <rect x="616" y="302" width="208" height="96" rx="8" fill="#f8f9fa" stroke="#e0e0e0"/>
-  <text x="628" y="322" class="t h" font-size="13">Comptes-rendus</text>
-  <text x="628" y="342" class="t" font-size="12">Un enregistrement (réunion,</text>
-  <text x="628" y="360" class="t" font-size="12">RETEX, visite) devient un PV,</text>
-  <text x="628" y="378" class="t" font-size="12">un relevé de décisions.</text>
-
-  <!-- Bloc gouvernance -->
-  <rect x="386" y="410" width="438" height="96" rx="8" fill="#f0fff0" stroke="#c0e0c0"/>
-  <text x="398" y="430" class="t h" font-size="13">Le SDIS garde la main</text>
-  <text x="398" y="450" class="t" font-size="12">• Règles d'accès : un chef de centre voit son centre, pas le voisin</text>
-  <text x="398" y="468" class="t" font-size="12">• Journal d'activité : qui, quoi, quand — consultable par le DPD</text>
-  <text x="398" y="486" class="t" font-size="12">• Budget par service, tableau de bord mensuel, empreinte carbone</text>
-
-  <!-- Bloc données perso -->
-  <rect x="386" y="518" width="438" height="96" rx="8" fill="#fff" stroke="#1a1a1a" stroke-dasharray="4 3"/>
-  <text x="398" y="538" class="t h" font-size="13">Ce qui ne sort jamais du portail</text>
-  <text x="398" y="558" class="t" font-size="12">Les documents complets · les noms des victimes et des agents</text>
-  <text x="398" y="576" class="t" font-size="12">· les données personnelles (bloquées à la mémorisation)</text>
-  <text x="398" y="596" class="t h r" font-size="12">Jamais utilisé pour entraîner un modèle d'IA — engagement écrit.</text>
-
-  <!-- ===== Frontière ===== -->
-  <line x1="880" y1="100" x2="880" y2="650" stroke="#E60000" stroke-width="3"/>
-  <rect x="846" y="330" width="68" height="60" rx="6" fill="#E60000"/>
-  <text x="880" y="352" class="t w h" font-size="11" text-anchor="middle">SEULS LES</text>
-  <text x="880" y="366" class="t w h" font-size="11" text-anchor="middle">EXTRAITS</text>
-  <text x="880" y="380" class="t w h" font-size="11" text-anchor="middle">UTILES</text>
-
-  <!-- Flèches portail <-> modèles -->
-  <line x1="840" y1="250" x2="936" y2="250" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#fl)"/>
-  <text x="918" y="240" class="t m" font-size="10.5" text-anchor="middle">extrait + consigne</text>
-  <line x1="936" y1="470" x2="840" y2="470" stroke="#E60000" stroke-width="2" marker-end="url(#flr)"/>
-  <text x="918" y="490" class="t m" font-size="10.5" text-anchor="middle">réponse</text>
-  <text x="918" y="503" class="t m" font-size="10.5" text-anchor="middle">non conservée</text>
-
-  <!-- ===== ZONE 3 : modèles ===== -->
-  <text x="1058" y="136" class="t h" font-size="17" text-anchor="middle">3. Les modèles d'IA</text>
-  <text x="1058" y="156" class="t m" font-size="12" text-anchor="middle">le « cerveau » — interchangeable</text>
-
-  <rect x="940" y="176" width="236" height="60" rx="8" fill="#fff" stroke="#E60000" stroke-width="2"/>
-  <text x="952" y="198" class="t h" font-size="13">Modèle européen</text>
-  <text x="952" y="216" class="t m" font-size="11.5">par défaut · zéro rétention</text>
-  <rect x="1100" y="184" width="66" height="18" rx="9" fill="#E60000"/>
-  <text x="1133" y="197" class="t w h" font-size="10" text-anchor="middle">ACTIF</text>
-
-  <rect x="940" y="248" width="236" height="60" rx="8" fill="#fff" stroke="#ccc"/>
-  <text x="952" y="270" class="t h" font-size="13">Modèle américain</text>
-  <text x="952" y="288" class="t m" font-size="11.5">pour certaines tâches, si le SDIS l'autorise</text>
-
-  <rect x="940" y="320" width="236" height="60" rx="8" fill="#fff" stroke="#ccc"/>
-  <text x="952" y="342" class="t h" font-size="13">Modèle libre (open source)</text>
-  <text x="952" y="360" class="t m" font-size="11.5">coût minimal</text>
-
-  <rect x="940" y="392" width="236" height="60" rx="8" fill="#fff" stroke="#ccc"/>
-  <text x="952" y="414" class="t h" font-size="13">Modèle hébergé au SDIS</text>
-  <text x="952" y="432" class="t m" font-size="11.5">sur vos propres serveurs, option</text>
-
-  <!-- Bascule -->
-  <rect x="940" y="520" width="236" height="94" rx="8" fill="#f8f9fa" stroke="#e0e0e0"/>
-  <text x="1058" y="542" class="t h" font-size="13" text-anchor="middle">Changez de modèle en 1 clic</text>
-  <text x="1058" y="562" class="t m" font-size="11.5" text-anchor="middle">Assistants, documents, historique</text>
-  <text x="1058" y="578" class="t m" font-size="11.5" text-anchor="middle">restent en place. Aucune dépendance</text>
-  <text x="1058" y="594" class="t m" font-size="11.5" text-anchor="middle">à un fournisseur. Tout s'exporte.</text>
-
-  <!-- Bandeau bas -->
-  <rect x="24" y="676" width="1152" height="60" rx="10" fill="#1a1a1a"/>
-  <text x="600" y="700" class="t w h" font-size="14" text-anchor="middle">Un portail IA, ce n'est pas un chatbot grand public : c'est un outil interne du SDIS, encadré, sourcé, tracé.</text>
-  <text x="600" y="722" class="t w" font-size="12.5" text-anchor="middle">Aucune compétence informatique requise · déploiement technique en 48 h · SDIS 00, démonstrateur édité par Quarkley</text>
+  <!-- message bas -->
+  <rect x="16" y="584" width="1168" height="60" rx="30" fill="#121417"/>
+  <circle cx="52" cy="614" r="6" fill="#D7141E"/>
+  <text x="70" y="619" class="pd-w" style="font-weight:600;font-size:15px">L'IA prépare, l'agent décide.</text>
+  <text x="300" y="619" style="fill:#c9ccd1;font-size:14px">Le résultat revient avec ses sources, et rien ne part sans validation.</text>
 </svg>
