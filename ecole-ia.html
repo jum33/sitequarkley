@@ -66,14 +66,62 @@
         <button type="button" id="ff-dir" data-f="direction">Direction</button>
         <button type="button" id="ff-met" data-f="metiers">Métiers</button>
       </div></div>
-      <div class="cat-grid" id="catalog"></div>
+      <div class="cat-grid" id="catalog"><article class="fcard" id="fc-acc" data-pub="agents">
+  <span class="who">Tous les agents</span><h3>Acculturation IA</h3>
+  <div class="pills"><span class="dur">1 h</span><span>In portail</span><span>Hors portail</span><span>Attestation</span></div>
+  <ul><li>Ce que fait une IA générative, et ses limites</li><li>Ce qu'on n'y met jamais</li><li>Utiliser le portail au quotidien</li></ul>
+  <button class="add" type="button" id="add-acc" data-id="acc" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-ref" data-pub="referents">
+  <span class="who">Référents IA de chaque service</span><h3>Construire ses assistants</h3>
+  <div class="pills"><span class="dur">1 jour</span><span>In portail</span><span>Attestation</span></div>
+  <ul><li>Transformer une tâche répétitive en assistant</li><li>Le tester sur des cas réels du service</li><li>Le maintenir dans le temps</li></ul>
+  <button class="add" type="button" id="add-ref" data-id="ref" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-pil" data-pub="direction">
+  <span class="who">Direction et encadrement supérieur</span><h3>Piloter l'IA</h3>
+  <div class="pills"><span class="dur">½ journée</span><span>Hors portail</span><span>Attestation</span></div>
+  <ul><li>Choisir les usages prioritaires</li><li>Fixer les règles : charte, périmètres, modèles</li><li>Lire les indicateurs d'usage et de coût</li></ul>
+  <button class="add" type="button" id="add-pil" data-id="pil" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-rgpd" data-pub="direction">
+  <span class="who">DPO, juristes, direction</span><h3>RGPD et règlement européen sur l'IA</h3>
+  <div class="pills"><span class="dur">2 h</span><span>Hors portail</span><span>Attestation</span></div>
+  <ul><li>Les obligations concrètes d'un SDIS</li><li>Tenir le registre des traitements IA</li><li>Former et attester (article 4)</li></ul>
+  <button class="add" type="button" id="add-rgpd" data-id="rgpd" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-red" data-pub="metiers">
+  <span class="who">Secrétariats et assistants</span><h3>Rédiger vite et juste</h3>
+  <div class="pills"><span class="dur">2 h</span><span>In portail</span><span>Attestation</span></div>
+  <ul><li>Comptes rendus, courriers, délibérations</li><li>Partir de vos modèles</li><li>Relire efficacement</li></ul>
+  <button class="add" type="button" id="add-red" data-id="red" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-rh" data-pub="metiers">
+  <span class="who">Groupement RH</span><h3>IA et données RH</h3>
+  <div class="pills"><span class="dur">2 h</span><span>In portail</span><span>Attestation</span></div>
+  <ul><li>Ce qu'on confie à l'IA, ce qu'on garde</li><li>Suivre les échéances automatiquement</li><li>Répondre aux questions statutaires</li></ul>
+  <button class="add" type="button" id="add-rh" data-id="rh" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-prv" data-pub="metiers">
+  <span class="who">Prévention et prévision</span><h3>Rédiger avec l'IA sans lui déléguer l'avis</h3>
+  <div class="pills"><span class="dur">2 h</span><span>In portail</span><span>Attestation</span></div>
+  <ul><li>Structurer un avis à partir des pièces</li><li>Retrouver les articles applicables</li><li>Garder la main sur la décision</li></ul>
+  <button class="add" type="button" id="add-prv" data-id="prv" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-fmt" data-pub="metiers">
+  <span class="who">Formateurs</span><h3>Former avec l'IA</h3>
+  <div class="pills"><span class="dur">½ journée</span><span>In portail</span><span>Attestation</span></div>
+  <ul><li>Concevoir une séquence plus vite</li><li>Générer QCM et mises en situation</li><li>Valider les contenus</li></ul>
+  <button class="add" type="button" id="add-fmt" data-id="fmt" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-com" data-pub="metiers">
+  <span class="who">Communication</span><h3>IA et communication publique</h3>
+  <div class="pills"><span class="dur">2 h</span><span>In portail</span><span>Hors portail</span><span>Attestation</span></div>
+  <ul><li>Ce qu'on publie, ce qu'on ne publie jamais</li><li>Décliner un message par réseau</li><li>Respecter votre charte</li></ul>
+  <button class="add" type="button" id="add-com" data-id="com" aria-pressed="false">+ Ajouter à ma demande</button></article><!--/catalog--></div>
       <p class="center-note">Durées indicatives. Programme détaillé et attestation de formation remis pour chaque session.</p>
     </div>
   </section>
   <section style="padding-top:0">
     <div class="wrap">
       <div class="head"><p class="kicker">Accompagnement</p><h2>Au-delà de la formation</h2></div>
-      <div class="acc3" id="accomp"></div>
+      <div class="acc3" id="accomp"><article class="fcard" id="fc-cad" data-pub="">
+  <span class="who">Accompagnement</span><h3>Cadrage des usages</h3>
+  <div class="pills"><span class="dur">Ateliers</span></div>
+  <ul><li>Analyse de vos processus réels, service par service</li><li>Arbitrage valeur, faisabilité, risque</li><li>Compte rendu : ce que vous avez demandé, ce qu'on a analysé, ce qu'on recommande</li></ul>
+  <button class="add" type="button" id="add-cad" data-id="cad" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-dep" data-pub="">
+  <span class="who">Accompagnement</span><h3>Construction et déploiement</h3>
+  <div class="pills"><span class="dur">Sur mesure</span></div>
+  <ul><li>Assistants construits avec vos référents</li><li>Testés sur vos cas avant ouverture</li><li>Formation des premiers utilisateurs</li></ul>
+  <button class="add" type="button" id="add-dep" data-id="dep" aria-pressed="false">+ Ajouter à ma demande</button></article><article class="fcard" id="fc-sui" data-pub="">
+  <span class="who">Accompagnement</span><h3>Suivi mensuel</h3>
+  <div class="pills"><span class="dur">Mensuel</span></div>
+  <ul><li>Usages et coûts par service</li><li>Nouveaux besoins, nouveaux assistants</li><li>Ajustements</li></ul>
+  <button class="add" type="button" id="add-sui" data-id="sui" aria-pressed="false">+ Ajouter à ma demande</button></article><!--/accomp--></div>
     </div>
   </section>
 </div>
