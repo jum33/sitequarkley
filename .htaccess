@@ -1,0 +1,62 @@
+# Configuration Apache pour l'hébergement OVH (remplace _redirects et les URL propres de Netlify)
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+AddDefaultCharset utf-8
+
+RewriteEngine On
+RewriteBase /
+
+# Fichiers cachés (.git, état du déploiement FTP…) : jamais servis
+RewriteRule (^|/)\. - [F,L]
+
+# HTTPS et domaine sans www
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://quarkley.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://quarkley.com%{REQUEST_URI} [R=301,L]
+
+# Anciennes pages (reprise de _redirects)
+RewriteRule ^(conformite|souverainete)(\.html)?$ /faq [R=301,L]
+RewriteRule ^sdis-00(\.html)?$ / [R=301,L]
+RewriteRule ^alternatives(\.html)?$ /le-portail-ia [R=301,L]
+RewriteRule ^it(\.html)?$ /dsi [R=301,L]
+RewriteRule ^articles(\.html)?$ /ressources [R=301,L]
+RewriteRule ^pourquoi(\.html)?$ / [R=301,L]
+RewriteRule ^comment(\.html)?$ /deployer [R=301,L]
+
+# Une seule adresse par page : /index(.html) → /, /dsi.html → /dsi
+RewriteRule ^index(\.html)?$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# URL propres : /dsi sert dsi.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/plain image/svg+xml application/xml
+</IfModule>
+
+# Cache : pages revalidées à chaque visite, polices et images gardées un mois
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
