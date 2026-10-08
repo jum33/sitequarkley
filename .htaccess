@@ -1,4 +1,4 @@
-# Configuration Apache pour l'hébergement OVH (remplace _redirects et les URL propres de Netlify)
+# Configuration Apache pour l'hébergement OVH, publié depuis GitHub par l'intégration Git (remplace _redirects et les URL propres de Netlify)
 
 Options -Indexes -MultiViews
 DirectoryIndex index.html
@@ -7,8 +7,9 @@ AddDefaultCharset utf-8
 RewriteEngine On
 RewriteBase /
 
-# Fichiers cachés (.git, état du déploiement FTP…) : jamais servis
+# Fichiers internes du dépôt (publié en entier par l'intégration Git d'OVH) : jamais servis
 RewriteRule (^|/)\. - [F,L]
+RewriteRule ^outils(/|$) - [F,L]
 
 # HTTPS et domaine sans www
 RewriteCond %{HTTPS} off
