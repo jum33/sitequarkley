@@ -8,7 +8,7 @@ const fs = require("fs"), path = require("path");
 const { chromium } = require(process.env.PW || "playwright");
 const ROOT = path.join(__dirname, ".."), BASE = "http://localhost:8765/";
 const PAGES = {
-  "index.html": ["news", "k-hours", "k-etp", "qi-1", "qi-2", "qi-3", "qi-4"],
+  "index.html": ["news", "k-hours", "qi-1", "qi-2", "qi-3", "qi-4"],
   "organigramme.html": ["orgchart", "seo-groupements"],
   "bons-gestes.html": ["gestes"],
   "ecole-ia.html": ["catalog", "accomp"],
