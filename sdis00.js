@@ -240,7 +240,6 @@ if ($("news")) {
   (function kpis(){
     const hB = B.reduce((s, b) => s + b.n[1] * b.f * (b.t[0] - b.t[1]) / 60, 0);
     $("k-hours").textContent = nf(hB);
-    $("k-etp").textContent = (hB / 1607).toLocaleString("fr-FR", {maximumFractionDigits:1});
   })();
   const NEWS = [
     {d:"24 septembre 2026", id:"rh", t:"Groupement RH : les échéances d'aptitude suivies automatiquement", s:"Chaque lundi, un rapport par centre, classé par urgence."},
