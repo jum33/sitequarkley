@@ -14,5 +14,7 @@ Le skill `quarkley-sdis00-site` contient les règles complètes (charte, composa
 - Après une modification des données de `sdis00.js`, relance `outils/prerender-seo.js`.
 - Avant livraison : aucun lien interne cassé, captures à 1280 px et 390 px des pages modifiées, aucun défilement horizontal.
 - Toute réorganisation (menu, fusion ou suppression de pages) se décide avec Jean-Marc avant d'être faite.
-- Pull request vers `main` seulement à la demande de Jean-Marc. Vérifie l'aperçu Netlify, puis fusionne avec la méthode « merge ».
+- On ne modifie jamais `main` directement : chaque changement passe par une branche, puis une pull request vers `main`.
+- Seul Jean-Marc fusionne. Un autre contributeur ouvre sa pull request, vérifie l'aperçu Netlify (`deploy-preview-<n>--quarkley-sdis.netlify.app`) et attend l'approbation de Jean-Marc, sans jamais fusionner lui-même.
+- Dans une session de Jean-Marc : pull request seulement à sa demande, vérifie l'aperçu Netlify, puis fusionne avec la méthode « merge » quand il le demande.
 - Écris en français.
